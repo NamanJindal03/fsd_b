@@ -1,0 +1,14 @@
+.container{
+    height: 800px; 
+    display: flex;
+    /* flex-wrap: wrap;   */
+    width: 300px; 
+    gap: 5px;
+    border: 10px solid black;
+    align-content: start;
+}
+.box{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}

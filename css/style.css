@@ -1,0 +1,68 @@
+/* h1{
+    color: red;
+    background-color: yellow;
+}
+h1{
+    color: green;
+    font-size: 100px;
+} */
+/* .targetedColor2{
+    color:green;
+}
+
+.targetedColor{
+    color: red;
+} */
+/* 
+#h1UniqueColor{
+    color: yellow;
+} */
+/* 
+h1{
+    color: magenta;
+}
+
+.targetedColor3{
+    color: yellow;
+} */
+/* li{
+    border: 2px solid green;
+}
+.red{
+    color: red;
+}
+.fs{
+    font-size: 40px;
+} */
+
+h1{
+    color: red;
+}
+h2{
+    color: green;
+}
+h3{
+    color: yellow;
+}
+h4{
+    color: blue;
+}
+h5{
+    color: purple;
+}
+h6{
+    color: orange;
+}
+
+h1, h2, h3, h4, h5, h6{
+    border: 1px solid red;
+}
+
+/* All selector universal selctor*/
+*{
+    font-size: 100px;
+}
+
+/* body{
+    background-color: bisque;
+} */

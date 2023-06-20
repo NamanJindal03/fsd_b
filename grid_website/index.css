@@ -1,0 +1,142 @@
+/* font-weight: 700, 400
+Font-size: 
+	h1: 48px;
+	h2: 18px;
+	body: 16px;
+	intro: 18px;
+	nav: 14px;
+
+Font Family: Montserrat
+
+#F1f119
+#000000
+#404040
+#FFF */
+
+/* 
+ CSS Reset 
+*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary: #fff;
+    --clr-secondary: #000000;
+    --clr-accent: #f1f119;
+    --clr-netural: #404040;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --fs-heading1: 3rem;
+    --fs-heading2: 1.125rem;
+    --fs-intro: 1.125rem;
+    --fs-nav: .925rem;
+    --fs-body: 16px;
+    --ff-project: 'Montserrat';
+}
+body{
+    margin: 0;
+    font-family: var(--ff-project), sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--clr-secondary);
+}
+/* 
+    ---------------------
+     Utility Classes
+    ---------------------
+*/
+.bg-accent{
+    background-color: var(--clr-accent);
+}
+
+.bg-primary{
+    background-color: var(--clr-primary);
+}
+.bg-neutral{
+    background-color: var(--clr-netural);
+}
+
+.text-primary{
+    color: var(--clr-primary);
+}
+
+.text-accent{
+    color: var(--clr-accent);
+}
+.text-secondary{
+    color: var(--clr-secondary);
+}   
+.text-neutral{
+    color: var(--clr-netural);
+}
+
+.font-weigth-regular{
+    font-weight: var(--fw-400);
+}
+
+.font-weigth-bold{
+    font-weight: var(--fw-700);
+}
+
+/* 
+    -----------------------
+        General Layout
+    ------------------------
+*/
+.main-grid{
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(1px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 2em;
+}
+
+@media (min-width: 600px) {
+    .main-grid{
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 350px)) minmax(1em, 1fr);
+    }
+}
+
+/* 
+    ----------------------
+        footer
+    ----------------------
+*/
+.footer{
+    padding: 4em 0;
+    text-align: center;
+    grid-template-areas: 
+        ". social ."
+        ". main .";
+}
+
+.footer-main{
+    grid-area: main;
+}
+
+.social-list{
+    grid-area: social;
+}
+
+.footer-main,
+.social-list{
+    grid-column: 2/ -2;
+}
+@media (min-width: 600px) {
+    .footer{
+        grid-template-areas: '. main main social .';
+    }
+}
+
+.info-col{
+    grid-column: 2/-2;
+}
+
+@media (min-width: 600px){
+    .info-col{
+        grid-column: span 1;
+    }
+}

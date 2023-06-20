@@ -1,0 +1,32 @@
+#container {
+    width: 600px;
+    border: 2px solid black;
+}
+h1 {
+    text-align: center;
+}
+.box {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    position: static;
+}
+.blue {
+    background-color: blue;
+    position: relative;
+    bottom: 80px;
+}
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}

@@ -1,0 +1,77 @@
+.box{
+    width: 500px;
+    height: 500px;
+    /* background-image: radial-gradient(circle at center, red 90%, blue, green 100%); */
+    /* background-image: linear-gradient(to top left, red 0%, green 60%, blue 100%); */
+    /* background-image: radial-gradient(circle, red, yellow, green);
+
+    background-image: conic-gradient(red 0deg,
+                                    yellow, 90deg,
+                                    green 120deg, 
+                                    blue 160deg,
+                                    black 220deg,
+                                    purple 360deg
+                                    ); */
+    background-image: url('https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=');
+                             
+}
+.subbox{
+    height: inherit; 
+    width:inherit;
+    /* height: 500px;
+    width: 500px; */
+    /* background-color: rgba(0,0,0, 0.6); */
+    background-image: radial-gradient(circle at center, rgba(0,0,0, 0.3) 0%,  black 100%);
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 5em 0 0 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    border: 20px solid black
+}
+.item{
+    background-color: pink;
+    color: black;
+    border: 5px solid purple;
+}
+
+
+
+/* fr */
+.container{
+    display: grid;
+    grid-template-columns: minmax(100px,3fr) minmax(100px, 1fr) minmax(100px,3fr);
+    grid-template-rows: 100px;
+    /* grid-template-areas: 
+    'two one one' ' two one one ' 'two three three'
+    ;  */
+}
+
+/* 
+.item-3{
+    background-color: orange;
+    grid-area: one;
+}
+.item-2{
+    background-color: blue;
+    grid-area: two;
+}
+.item-1{
+    grid-area: three;
+} */
+
+@media only div and (min-width: 500px){
+   .container{
+    background-color: red;
+   }
+}

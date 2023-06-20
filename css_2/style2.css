@@ -1,0 +1,154 @@
+h1{
+    border: 1px solid red;
+    /* display: none; */
+    visibility: visible; /* contrary visibilit: visibile */
+}
+/* span{
+    display: inline-block;
+    border: 1px solid red;
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    width: 10px;
+} */
+/* 
+span{
+    display: inline-block;
+}
+#span1{
+    margin-right: 450px;
+}
+#enclosedSpans{
+    border: 1px solid red;
+}
+span:hover{
+    color: purple;
+    font-size: 20px;
+}
+
+#primary-btn{
+    background-color: #6b0000;
+}
+
+#primary-btn:hover{
+    background-color: #ef3e3e;
+}
+
+a:visited{
+    color: orange
+}
+a:link{
+    color: yellow
+}
+a:active{
+    color: white;
+}
+
+input:focus-visible{
+    outline: 3px solid red;
+} */
+/* descendencec selecotr */
+
+/* 
+div div article{
+    background-color: mediumblue;
+}
+
+div article{
+    background-color: #ef3e3e;
+}
+
+html body div div article{
+
+}
+div article{
+
+}
+div  p{
+    background-color: purple;
+} */
+
+/* dom  */
+/* 
+    1) mediumblue 
+    2) no color
+    3) ef3e3e
+    4) none of the above
+*/
+
+/* div ~ p{
+    background-color: purple;
+} */
+/* div ~ #ptag{
+    background-color: aqua;
+} */
+/* 
+#ptag{
+    color: green
+} */
+/* .letterIncrease::first-letter{
+    font-size: 30px;
+}
+.letterIncrease::first-line{
+    color:yellow;
+}
+ul ::marker{
+    color: green;
+}
+::selection{
+    color: greenyellow;
+} */
+
+#ul1 ::marker{
+    color: red;
+}
+
+ol ::marker{
+    color: yellow;
+}
+
+#li1::marker{
+    color: green;
+}
+
+#ul1 .commonLi::marker{
+    color: blue;
+}
+
+ol .commonLi::marker{
+    color: blue;
+}
+
+::placeholder{
+    color: red;
+}
+
+p::after{
+    /* content: ''; */
+    color: red;
+    background-color: yellow;
+    text-decoration: underline;
+    border: 1px solid red;
+    
+}
+p::before{
+    content: 'THE';
+    color: grey;
+}
+/* static number - 1,2,23 
+    odd
+    even
+*/
+#pDivContainer :nth-child(3n+1){
+    background-color: grey;
+}
+#pDivContainer :nth-last-child(2){
+    background-color: green;
+}
+
+/* 
+    n =0 => 2 1
+    n=1 => 4 2
+    n=2 => 6 3
+*/

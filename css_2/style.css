@@ -1,0 +1,131 @@
+h1{
+    /* border: 10px solid red; */
+
+    /* padding: 10px 20px 30px 40px; */
+    /* padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left:40px; */
+
+    /* margin: 20px 30px 40px 50px; */
+    /* margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left:40px; */
+
+    /* padding: 10px 20px;  */
+    /* top, bottom: 10px, rigth, left: 20px */
+    
+    /* margin: 10px 20px; */
+
+    /* padding: 10px; */
+
+    /* padding: 10px 20px 30px; */
+    
+    /* padding-bottom: 30px;
+    padding: 10px 20px; */
+    /* padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left:20px; */
+
+    
+
+    /* padding: 10px 20px 30px 20px; */
+
+    border: 1px solid red;
+}
+/* 
+button{
+    padding: 5px;
+} */
+
+/* 
+
+*/
+
+a[href]{
+    color: rgb(255, 255, 255);
+    color: #FF0000
+    /* 00-FF | 00-FF | 00-FF */
+}
+
+a[href='https://www.google.com']{
+    background-color: yellow;
+}
+a[href^= 'https']{
+    font-size: 30px;
+}
+a[href$='in']{
+    text-decoration: line-through;
+}
+a[href~="google"]{
+    /* text-decoration: overline; */
+    color:white
+}
+a[href*="google"]{
+    /* text-decoration: overline; */
+    color:white
+}
+
+[title = 'btn-1']{
+    border:3px solid red;
+}
+/* 
+    regex -> regular expressions
+    used for 
+    string pattern matching 
+    ^ 
+    $
+    ~
+    2 or 3 more
+*/
+h1{
+    border: 1px solid red;
+    /* display: none; */
+    visibility: hidden; /* contrary visibilit: visibile */
+}
+/* span{
+    display: inline-block;
+    border: 1px solid red;
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    width: 10px;
+} */
+
+span{
+    display: inline-block;
+}
+#span1{
+    margin-right: 450px;
+}
+#enclosedSpans{
+    border: 1px solid red;
+}
+span:hover{
+    color: purple;
+    font-size: 20px;
+}
+
+#primary-btn{
+    background-color: #6b0000;
+}
+
+#primary-btn:hover{
+    background-color: #ef3e3e;
+}
+a:visited{
+    color: orange
+}
+a:link{
+    color: yellow
+}
+#primary-btn:active{
+    color: white;
+}
+#link:active{
+    color: white;
+    background-color: black;
+}

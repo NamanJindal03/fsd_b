@@ -1,0 +1,101 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+*{
+    outline: 1px solid purple;
+}
+/* :root{
+    
+    --font-color: red;
+    --bg-color-primary: rgb(225, 225, 225);
+    --bg-color-seconary: rgb(148, 133, 133);
+}
+
+.posts{
+    background-color: var(--bg-color-seconary);
+}
+.abcd{
+    color: var(--font-color)
+} */
+
+/* 
+    light and dark theme
+*/
+
+/* 
+    css reset
+    variables
+    utility classes
+
+*/
+
+/* 1st css reset */
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+
+button{
+    padding: 4px 8px;
+}
+.box{
+    width: 400px; /* content-width */
+    padding: 20px;
+    border: 10px solid green;
+}
+.box::after{
+    width: 100px;
+    display: block;
+    content: 'this is somethign';
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 5px;
+}
+
+.box:hover{
+    background-color: red;
+}
+.box2{
+    display: inline-block;
+}
+
+.flex-class{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* height: 98vh; */
+    
+}
+article{
+    display: inline-block;
+    width: 00px;
+}
+.test1{
+    display:inline;
+    justify-self: stretch;
+}
+.test2{
+    /* align-self: flex-end; */
+}
+.flex-class > *{
+    width: 500px;
+}
+
+.video-container{
+    position: relative;
+}
+nav{
+    position: absolute;
+    top:0;
+}
+ul{
+    display: flex;
+}

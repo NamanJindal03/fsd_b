@@ -1,0 +1,23 @@
+.c-alter-width{
+    width: 200px;
+}
+/* .c-alter-hover{
+    background-color: red;
+} */
+/* .dropdown-item:hover{
+    background-color: green;
+} */
+.active{
+    color: yellow;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: purple;
+}
+
+/* 
+    link -> bootstrap
+
+    link -> css 
+
+*/

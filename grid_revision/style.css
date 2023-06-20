@@ -1,0 +1,26 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: minmax(50px, 30%) minmax(100px, 1fr)  minmax(50px, 30%);
+    grid-template-areas: ;
+}
+.box{
+    background-color: green ;
+    height: 100px;
+    border: 1px solid white;
+    /* width: 100px; */
+}
+
+.special1{
+    background-color: red;
+    /* grid-column-start: 2; */
+    /* grid-column-end:4 ; */
+    grid-column: 2/4;
+    /* 4-2 = 2 (hence covering 2 columns) */
+
+    /* grid-areas */
+}

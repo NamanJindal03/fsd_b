@@ -1,0 +1,24 @@
+.features{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+}
+.red{
+    background-color: red;
+    order: 1;
+}
+.green{
+    background-color: green;
+    order: 2;
+}
+.orange{
+    background-color: orange;
+}
+/* targeting mobiles */
+/* @media (max-width: 700px){
+    .features{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+

@@ -1,0 +1,55 @@
+.container{
+    width: 500px;
+    background-color:black;
+    position: relative;
+    z-index: 10;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    color: white;
+}
+.red{
+    background-color: red;
+    position: relative;
+    z-index: 1;
+}
+
+.green{
+    background-color: green;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left:50px;
+}
+.blue{
+    background-color: blue;
+    position: relative;
+    z-index: 0;
+    bottom: 70px;
+}
+.purple{
+    background-color: purple;
+}
+/* 
+    print
+    screen
+*/
+
+@media only screen and (min-width:) { 
+    /* All your print styles go here */
+    
+    #header, #footer, #nav { 
+        display: none !important; 
+    }
+    body{
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+    .red{
+        background-color: yellow;
+    }
+    
+}
+
+@media (max-width: )

@@ -1,0 +1,75 @@
+.container{
+    
+}
+.mainBox{
+    height: 800px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 600px;
+    margin-left: 50px;
+    flex-wrap: wrap;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(198, 77, 198);
+    border: 1px solid purple;
+    font-size: 40px;
+}
+#box1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#box3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 
+new css
+*/
+
+/* .rectangle{
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.square{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 50px;
+}
+#uniqueSquare{
+    background-color: green;
+    order: 1;
+    flex-grow: 1;
+}
+#uniqueSquare2{
+    background-color: orange;
+    order:2;
+    flex-grow: 1;
+} */
+
+.book{
+    border: 3px solid red;
+    width: 300px;
+    box-shadow: 10px 10px 5px purple;
+}

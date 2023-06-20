@@ -1,0 +1,19 @@
+.col-4{
+    outline: 1px solid red;
+}
+.col-6{
+    outline: 1px solid red;
+}
+.col-8{
+    outline: 1px solid red;
+}
+
+.col-2{
+    outline: 1px solid blue;
+}
+.col-10{
+    outline: 1px solid green;
+}
+.row{
+    outline: 1px solid red;
+}

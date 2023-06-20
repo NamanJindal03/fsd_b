@@ -1,0 +1,65 @@
+:root{
+    font-size: 20px;
+}
+html{
+    font-size: 32px;
+    background-color: red;
+   
+}
+body{
+    background-color: yellow;
+}
+#parent{
+    font-size: 2rem;
+     /*  */
+    background-color: green;
+    height: 10vh;
+}
+#child{
+    font-size: 20px;  
+}
+#gChild{
+    /* font-size: 18px; 
+    padding: 2em; 
+    border: 1em solid white; */
+
+    /*fs: 20px  */
+    padding: 1.5em; /* 30 */
+    margin: 2em; /* 40 */
+}
+footer{
+    margin-top: 50%;
+}
+
+/* 
+    rem -> root em ->
+    vw -> viewport width
+    vh -> viewport height
+*/
+
+/* min-width 
+    max-width
+*/
+@media (min-width: 700px){
+    html{
+        background-color: aqua;
+    }
+}
+/* 
+@media (max-width: 700px){
+    html{
+        color: purple
+    }
+}
+
+@media (max-width: 350px){
+    html{
+        background-color: darkgoldenrod;
+    }
+}
+
+@media (max-width: 850px) {
+    .footer-div{
+        background-color: darkblue;
+    }
+} */

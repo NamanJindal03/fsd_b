@@ -1,0 +1,39 @@
+.outerCircle{
+    background-color: red;
+    height: 500px; /* 500 - 250px */
+    width: 500px; /* 500 - 250px */
+    position: relative;
+    /* border-radius: 50%; */
+}
+.innerCircle{
+    background-color: pink;
+    height: 200px;
+    /* height: 1px; */
+    width: 200px;
+    top: 250px; /* 50% */
+    left: 250px; /* 50% */
+    position: absolute;
+    margin: -100px 0px 0px -100px;
+    /* border-radius: 50%; */
+}
+mark{
+    background-color: grey;
+}
+
+input:required{
+    border-bottom: 10px solid blue;
+}
+
+input:optional{
+    border-top: 10px solid green;
+}
+
+.table{
+    display: table;
+}
+.row{
+    display: table-row;
+}
+.cell{
+    display: table-col;
+}
