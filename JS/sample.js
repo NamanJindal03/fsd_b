@@ -214,23 +214,337 @@
 
 
 //GLOBAL SCOPE
-var gl = 100;
+// var gl = 100;
 
 
-function inner1(){
-    console.log(gl);
-    var inn1 = 200;
-    console.log(inn1);
-    function inner2(){
-        console.log(gl);
-        console.log(inn1);
-        var inn2 = 300;
-        console.log(inn2);
+// function inner1(){
+//     console.log(gl);
+//     var inn1 = 200;
+//     console.log(inn1);
+//     function inner2(){
+//         console.log(gl);
+//         console.log(inn1);
+//         var inn2 = 300;
+//         console.log(inn2);
+//     }
+//     inner2();
+//     //console.log(inn2)
+// }
+// inner1();
+// console.log(gl);
+// console.log(inn1);
+// console.log(inn2);
+
+
+// function abcd(){
+//     var a = 10;
+//     console.log(a)
+// }
+// abcd();
+// console.log(a);
+
+
+// var a = 100;
+// function ran1(){
+//     a = 200;
+//     console.log(a)
+// }
+
+// function ran2(){
+//     a = 100;
+//     console.log(a)
+
+//     function ran3(){
+//         console.log(a);
+//     }
+//     ran3()
+// }
+// ran1();
+// ran2();
+
+// 
+
+
+// //Question 2
+// function sample(){
+//     console.log(x);
+//     var x = 500;
+// }
+// sample();
+
+
+// //Question 1
+// console.log(y);
+// var y = 200;
+
+
+
+// var x = 200;
+// console.log(x) //200
+// function exec1(){
+//     if(x > 10){
+//         var x = 50;
+//     }
+//     console.log(x)
+// }
+// exec1();
+// console.log(x)
+
+
+// var x = 200;
+// function exec1(){
+//     if(x > 10){
+//         x = 50;
+//     }
+//     console.log(x) //
+// }
+// exec1();
+// console.log(x) //
+
+// var y = 200;
+// function exec1(){
+
+//     if(y > 10){
+//        var x = 50;
+//     }
+//     console.log(x) //
+// }
+// exec1();
+// console.log(x) //
+
+// var y = 200;
+// function exec1(){
+//     var y;
+//     if(y > 10){
+//        var x = 50;
+//     }
+//     y = 100;
+//     console.log(x) //?undefined
+//     console.log(y) //?100
+// }
+// exec1();
+// console.log(x) //?error
+// console.log(y) //?200
+
+/* 
+    object is a key value pair ->
+    key is also sometimes referred to as properties
+*/
+// var obj = {}; // {} => object literal
+// var obj2 = new Object();
+
+// var obj3 = {
+//     name: 'naman',
+//     age: 4,
+//     gender: 'male'
+// }
+// console.log(obj3);
+
+// /* Accessing the values of the object */
+// /* 
+// dot notation
+// */
+// console.log(obj3.name) //naman
+// console.log(obj3.gender) //male
+
+// /* 
+//     square bracket notation
+// */
+// console.log(obj3['age']) //4
+// console.log(obj3['gender']) //male
+// console.log(obj3['name']) //naman
+
+// /* Giving the object new values */
+// obj3.location = 'delhi';
+// console.log(obj3);
+
+// obj3['school'] = 'rdps';
+// console.log(obj3);
+
+
+// /* 
+// {
+//     "name": "naman",
+//     "age": 4,
+//     "gender": "male",
+//     "location": "delhi",
+//     "school": "rdps"
+// }
+// */
+// /* changing the value of an existing key */
+// obj3.location = 'new delhi';
+// console.log(obj3);
+
+// obj3['school'] = 'bal bharti';
+// console.log(obj3);
+
+// /*  */
+// var arr =[];
+// arr.length 
+
+
+// var str = 'this is my first format of string'; //single quotes
+// var str = "this is my first format of string"; //double quotes
+// var str = `this is my first format of string`; //tilde quotes -> below ESC ~
+
+// var str = "this is my 'first' format of string"; //double quotes
+// // var str = "this is my "first" format of string"; //error
+
+// var str = 'this is my "first" format of string'; //single quotes, double quotes inside
+// /* 
+//     If I am dealing with single quotes and double quotes, If I ened to contcatenate the variables,
+//     I need to quit the quote whereas in the case of tilde this is not needed
+// */
+
+// var abcd = 10;
+// var name = 'naman';
+// var age = 12;
+// var strSingle = 'this is my first number' + abcd;
+// var strDouble = "this is my first number" + abcd;
+// var strTilde = `this is my first number ${abcd}`;
+
+// var strTildeComplicated = `this is my tilde variable, I am ${name} and my age is ${age}`;
+
+/* 
+    whenever you are delaing with a lot of variables use ` -> 
+
+*/
+
+
+
+
+// function abcd(){
+//     //normal funciton or function declaration
+// }
+/* 
+    ${}
+*/
+
+// var out = 10;
+// function outer(){
+//     var ins = 200;
+//     inner();
+//     console.log(`this is my outer ${out}`);  //20
+//     out = 200;
+// }
+// function inner(){
+//     out = 20;
+//     // console.log(`inside ${ins}`) //error
+// }
+
+// outer();
+
+// let abcd = 10;
+// console.log(`this is my outer ${abcd + 10+ 20+ 50}`);  //20
+
+// 5 -> 
+
+// 5  6
+/* 
+
+    ~ => 6
+    ^ =>
+    | => 
+    & =>
+*/
+
+/* 
+    BODMAS -> Brackets Divisiion Multiplcation addition subtraction
+*/
+
+
+// function outer(){
+//     abcd = 10;
+//     console.log(abcd);
+// }
+// console.log(abcd);
+// outer();
+
+
+function parent(){
+    var sample = 'sam';
+    function hoisted(){
+        return 'I am a function';
     }
-    inner2();
-    //console.log(inn2)
+    var hoisted = "I am a variable";
+    var hoisted = hoisted()
+    return hoisted();
 }
-inner1();
-console.log(gl);
-console.log(inn1);
-console.log(inn2);
+
+console.log(parent()); //
+
+
+function parent(){
+    var sample = 'sam';
+    function hoisted(){
+        return 'I am a function';
+    }
+    var hoisted = "I am a variable";
+    var hoisted = function sample(){
+        console.log('sample func');
+        return 'I am another function';
+    }
+
+    console.log(hoisted()) //
+
+    return hoisted();
+}
+
+// console.log(parent()); //
+/* 
+console -> 
+*/
+
+
+
+// function parentCheck(){
+//     var check = function check2(){
+//         console.log('check 2')
+//     };
+//     var functionReturn = check();
+//     return functionReturn;
+// }
+
+
+// parentCheck();
+
+
+
+
+/* 
+    Backend -> node (express)
+
+    Frontend -> Desktop -> Electron -> JS framework -> POSTMAN -> 
+                Desktop Browser -> HTML CSS JS, React, angular, vue, svelte
+                Mobile  -> React native  -> andrpid and ios
+
+
+    JAVA -> 
+        MOBILE -> KOTLIN, JAVA -> android development ->
+        JAVA Backend -> spring boot 
+        Java -> DSA 
+*/
+// function parent10(){
+//     var sample = 'sam';
+//     function hoisted(){
+//         return 'I am a function';
+//     }
+//     var hoisted = "I am a variable";
+//     var hoisted = hoisted()
+//     console.log(hoisted)
+//     //return hoisted();
+// }
+// parent10()
+
+
+// function parent(){
+//     var sample = 'sam';
+//     var hoisted = "I am a variable";
+//     function hoisted(){
+//         return 'I am a function';
+//     }
+//     //var hoisted = hoisted()
+//     return hoisted();
+// }
+
+// console.log(parent()); //
