@@ -452,6 +452,9 @@
     BODMAS -> Brackets Divisiion Multiplcation addition subtraction
 */
 
+/* 
+    receiveddd-> abcd func, logic 
+*/
 
 // function outer(){
 //     abcd = 10;
@@ -461,34 +464,35 @@
 // outer();
 
 
-function parent(){
-    var sample = 'sam';
-    function hoisted(){
-        return 'I am a function';
-    }
-    var hoisted = "I am a variable";
-    var hoisted = hoisted()
-    return hoisted();
-}
+// function parent(){
+//     var sample = 'sam';
+//     hoisted()
+//     function hoisted(){
+//         return 'I am a function';
+//     }
+//     // var hoisted = "I am a variable";
+//     var hoisted = hoisted()
+//     return hoisted();
+// }
 
-console.log(parent()); //
+// console.log(parent()); //
 
 
-function parent(){
-    var sample = 'sam';
-    function hoisted(){
-        return 'I am a function';
-    }
-    var hoisted = "I am a variable";
-    var hoisted = function sample(){
-        console.log('sample func');
-        return 'I am another function';
-    }
+// function parent(){
+//     var sample = 'sam';
+//     function hoisted(){
+//         return 'I am a function';
+//     }
+//     var hoisted = "I am a variable";
+//     var hoisted = function sample(){
+//         console.log('sample func');
+//         return 'I am another function';
+//     }
 
-    console.log(hoisted()) //
+//     console.log(hoisted()) //
 
-    return hoisted();
-}
+//     return hoisted();
+// }
 
 // console.log(parent()); //
 /* 
@@ -548,3 +552,310 @@ console ->
 // }
 
 // console.log(parent()); //
+
+// var var1 = 10;
+// test1();
+// test2();
+// function test1(){
+//     console.log(var1);//
+//     var1 = 20;
+// }
+// function test2(){
+//     console.log(var1);//
+// }
+
+// var var1 = 20;
+// var var2 = 50;
+// function test1(){
+//     console.log(var1);//
+//     var2 = test2();
+//     console.log(var2);//
+//     console.log(var1);//
+    
+// }
+// function test2(){
+//     var1 = 30;
+// }
+// test1();
+
+
+
+// var var1 = 20;
+// function test1(){
+//     var var2 = 200;
+//     console.log(var1);//
+//     var1 = test2();
+//     console.log(var1);//
+
+//     function test2(){
+//         var1 = 30;
+//         return var1;
+//     }
+    
+// }
+
+// test1();
+
+
+// (function normalFunc(){
+//     console.log('abcd');
+// })();
+
+// (function normalFunc3(var2){
+//     console.log(var2);
+// })(50); 
+
+// var funcExpression = function normalFunc3(var2){
+//     console.log(var2)
+// }
+// funcExpression(20);
+
+// function normalFunc4(var1){
+//     console.log(var1);
+// }
+// normalFunc4(10);
+
+// normalFunc();
+// normalFunc(); //calling // invoking 
+
+// var functionExpression = function abcd(){
+//     console.log('abcd');
+// }
+
+// var funcitonExpression2 = function(){
+//     console.log('abcd2');
+// }
+// funcitonExpression2();
+
+
+//differenfcec between callling a function and referencing a function
+
+//1st applciaition
+// function mainFunc(cb, cb2){
+//     var test = 10;
+//     console.log(cb(test));
+//     // console.log(cb2);//TODO: need output for this
+// }
+//callback
+
+/* function call vs function refence */
+
+// function passingFunc(num){
+//     console.log(num);
+// }
+// function mainFunc2(){
+//     console.log('main')
+// }
+// var mainFunc3 = function mainFunc3(){
+//     console.log('main func 3')
+// }
+
+// mainFunc(passingFunc, mainFunc3, mainFunc2);
+
+// console.log(passingFunc());//
+
+
+
+// function mainFuncTest(numb){
+//     console.log(numb);
+// }
+// var testVar = 10;
+// mainFuncTest(testVar)
+
+
+
+// var testFunc = function(){
+//     console.log('random')
+// }
+
+// var testFunc3 = function(){
+//     console.log('random')
+
+// }
+
+// var testFunc4 = function(){
+//     console.log('random')
+
+// }
+
+
+// var testFunc2 = function test(){
+//     console.log('random')
+
+// }
+
+// console.log(testFunc2()) //
+// console.log(testFunc()) //
+// console.log(testFunc3()) //
+// console.log(testFunc4()) //
+
+
+// var x = 10;
+// console.log(x); //10
+
+// if(true){
+//     var abcd = (function(){
+//         var x = 20;
+//         console.log(x); //20
+//     })();
+//     console.log(abcd)
+// }
+// console.log(x); //10
+
+
+// var temp = function (){
+//     console.log('first');
+// }
+
+// var temp2 = function(cb){
+//     console.log('second');
+//     return cb;
+// }
+// console.log(temp2(temp)); 
+
+
+
+// function temp1(){
+//     function temp2(){
+//         console.log("first")
+//     }
+//     return temp2;
+// }
+
+// var abcd = temp1();
+// console.log(abcd);
+
+// var x = 200;
+// function sum(){
+//     var x = 10;
+//     x++;
+//     return x;
+// }
+
+// function temp1(){
+//     return sum();
+// }
+
+// var abcd = temp1();
+// var abcd2 = temp1();
+// console.log(abcd);
+// console.log(abcd2);
+
+// var x = 200;
+// function sum(){
+//     x++;
+//     return x;
+// }
+
+// function temp1(cb){
+//     return cb();
+// }
+
+// var abcd = temp1(sum);
+// var abcd2 = temp1(sum);
+// console.log(abcd);
+// console.log(abcd2);
+
+// var myVar = "foo";
+// (function(){
+//     console.log(`my foo is ${myVar}`);
+//     var myVar = "bar";
+//     console.log(`my foo is ${myVar}`);
+// })()
+
+// var funcExpression = function (num){
+//     console.log('I am normal');
+//     console.log(num)
+// }
+
+// var firstArrowFuncForm = () =>{
+//     console.log('i am first arrow')
+// }
+
+// var seconfArrowFuncForm = num => {
+//     console.log(num);
+// }
+
+// var thirdArrowFuncForm = num => console.log(num);
+
+// var fourthArrowFuncForm = (num, numb2) => console.log(num + numb2);
+
+// fourthArrowFuncForm(100, 200);//
+// thirdArrowFuncForm(1000);//
+// thirdArrowFuncForm(20);//
+// thirdArrowFuncForm(30);//
+
+// if(true) console.log('first');
+// if(true) {
+//     console.log('first')
+// }
+
+// var funcAr = num => {
+//     console.log(num)
+// }
+// funcAr(100, 200, 3000);
+
+/* 
+    syntatic sugar
+*/
+
+// function higherOrderFunction(cb){
+//     console.log('I am higher');
+//     console.log(cb); //10
+// }
+
+// function firstClassFunc(){
+//     console.log('i am first')
+// }
+
+// var IAmTheFunctionStoreVariable = function(){
+//     console.log('i am first')
+// }
+
+
+// higherOrderFunction(firstClassFunc);
+
+// higherOrderFunction(function (){
+//     console.log('i am first');
+// })
+
+// var numb = 10;
+// higherOrderFunction(numb) //
+// higherOrderFunction(10) //
+
+// function isEvenNumber(numb){
+//     if(numb %2 === 0){
+//         return true;
+//     }
+//     return false;
+// }
+
+// isEvenNumber(10)
+
+// //step1 
+// function isEvenNumber(numb){
+//     return numb%2 === 0;
+// }
+
+// //step 2
+// var isEvenNumber = (numb) => {
+//     return numb %2 === 0;
+// }
+
+// //step 3
+// var isEvenNumber = numb => {
+//     return numb %2 === 0;
+// }
+
+//step 4
+// var isEvenNumber = numb => numb%2 ===0; 
+
+
+var isEvenNumber = numb => 100;  //there is a auto return applied
+/* 
+    In the above syntax I cannot use a return keyword 
+    When we have a single line syntax, it automaticalls adds a return to it
+*/
+
+var returnValueOfTheFunc = isEvenNumber(99);
+console.log(returnValueOfTheFunc)
