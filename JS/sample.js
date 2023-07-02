@@ -851,11 +851,199 @@ console ->
 // var isEvenNumber = numb => numb%2 ===0; 
 
 
-var isEvenNumber = numb => 100;  //there is a auto return applied
+// var isEvenNumber = numb => 100;  //there is a auto return applied
 /* 
     In the above syntax I cannot use a return keyword 
     When we have a single line syntax, it automaticalls adds a return to it
 */
 
-var returnValueOfTheFunc = isEvenNumber(99);
-console.log(returnValueOfTheFunc)
+// var returnValueOfTheFunc = isEvenNumber(99);
+// console.log(returnValueOfTheFunc)
+
+
+// var funcDemo = num =>{
+//     return 'hello'
+// }
+
+// funcDemo(10);
+
+// var x = 200;
+// function exec1(){
+// //x : undeifned
+//     if(x > 10){
+//          var x = 50; //it won't go inside 
+//     }
+//     console.log(x);//undefined
+// }
+// exec1();
+// console.log(x);//200
+
+//memory -> x => undefined
+
+// function A(){
+//     console.log('called A');
+//     return false;
+// }
+// function B(){
+//     console.log('called B');
+//     return false;
+// }
+
+// function C(){
+//     console.log('called C');
+//     return true;
+// }
+// console.log( A() && (C() || B()));
+
+//var variable_2; 
+// var variable = 10;
+// (()=>{
+//     variable_3 = 35;
+//     console.log(variable_3);
+//     var variable_3 = 45;
+//     variable_2 = 15; //var 
+//     console.log(variable);
+
+// })();
+// console.log(variable_2);
+// console.log(variable_3);
+// var variable = 30;
+
+/* 
+    (()=>{
+
+    })()
+    (function(){
+        clg
+    })()
+
+*/
+
+// var isEvenNumber = numb => numb%2 ===0; 
+
+// var isEvenNumber = numb => console.log('abcd');  //there is a auto return applied
+
+// console.log(isEvenNumber());
+
+// console.log(console.log('abcd'));
+// console.log(100+200);
+
+// var abcd = undefined || 400;
+// console.log(abcd);
+
+// var temp2 = 400 && (800 || 1000);
+// console.log(temp2);
+
+// var temp3 = 500 || undefined;
+// console.log(temp3);
+
+// var temp4 = '' || 1000;
+// console.log(temp4);
+
+/* 
+    Ruleboox && and ||
+    in || 
+        if first is true then return from there itself
+        if first is false it checks second
+
+    in &&
+        if first is true then it checks the second as well
+        if first is false it doesnt need to check the second as there is no need 
+
+*/
+
+
+// function A(){
+//     console.log('called A');
+//     return false;
+// }
+// function B(){
+//     console.log('called B');
+//     return false;
+// }
+
+// function C(){
+//     console.log('called C');
+//     return true;
+// }
+// console.log( C() && (A() || B()));
+
+// function sample(){
+//     return 'retu';
+//     console.log('I wanna execute'); //dead code
+//     console.log('execcute me please');//dead code
+// }
+
+// var returnVal = sample();
+// console.log(returnVal);
+
+
+// function hof(cb, cb2) {
+//     cb();
+//     cb2();//terminates
+//     console.log('abcd');
+//     console.log('def');
+// }
+
+// hof(()=>{
+//     console.log('first');
+// }, 10);
+
+// var funcStore = 10;
+// funcStore();
+
+// function testHof (cb){
+//     cb();
+// }
+// var funcFirstClass = () =>{
+//     console.log('first class')
+// }
+// testHof(funcFirstClass);
+
+// testHof(()=>{
+//     console.log('first class')
+// }, 10)
+
+/*
+    try catch -> intro
+
+*/
+
+// try(){
+// function hof2(cb){
+//     try{
+//         cb();
+//     }
+//     catch( err){
+//         console.log(err);
+//     }
+//     console.log('first');
+//     console.log('second');
+// }
+
+// hof2(func);
+
+// }
+// catch(){
+
+// }
+
+
+// var abcd = () => "hello"
+
+// var y = 200;//parent 
+// function exec1(){
+//     /* 
+//         memory x: 50
+//     */
+//    /* 
+   
+//     y is taken from heirarchial lexical order
+//    */
+//     if(y > 10){ //200 > 10
+//         var x = 50;//executed
+//     }
+//     console.log(x); //50
+// }
+// exec1();
+// console.log(x);//error
