@@ -1009,19 +1009,27 @@ console ->
 
 */
 
-// try(){
-// function hof2(cb){
+
+// function hof2(cb, numb){
+//     //this hof2 can only take number greater than 100 as the second argument
 //     try{
+//         if(numb <= 100){
+//             throw new Error('Hof2 can only take numbers greater than 100');
+//         }
 //         cb();
+//         if(true){
+//             throw new Error('you made mistake');
+//         }
+
 //     }
-//     catch( err){
-//         console.log(err);
+//     catch( error){
+//         console.log(`hof2 cb error: ${error.message}`);
 //     }
 //     console.log('first');
 //     console.log('second');
 // }
 
-// hof2(func);
+// hof2(func, 50);
 
 // }
 // catch(){
@@ -1047,3 +1055,39 @@ console ->
 // }
 // exec1();
 // console.log(x);//error
+
+
+
+// function hof2(sumCb, numb){
+//     //this hof2 can only take number greater than 100 as the second argument
+//     try{
+//         if(numb <= 100){
+//             throw new ReferenceError('Hof2 can only take numbers greater than 100');
+//         }
+//         var sum1 = sumCb(20, 30);
+//         var furtherSum = sumCb(sum1, 100)
+//         if(true){
+//             throw new Error('you made mistake');
+//         }
+
+//         // if(client.userType !== 'customer'){
+//         //     throw new Error('Something went wrong, our system is facing technical difficulties')
+//         // }
+//         // orderPlaced();
+//     }   
+//     catch( error){
+//         console.log(`hof2 cb error: ${error}`);
+//     }
+//     console.log('first');
+//     console.log('second');
+// }
+
+// hof2(func, 50);
+
+// try{
+//     console.log('i am trying')
+// }
+// catch(eee){
+//     console.log('theiuhfei')
+// }
+
