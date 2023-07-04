@@ -1091,3 +1091,167 @@ console ->
 //     console.log('theiuhfei')
 // }
 
+//part 1
+// function abcd(){
+//     try{
+//         plo = 10;
+//     }
+//     catch(err){
+//         console.log(err)
+//     }
+// }
+// abcd();
+// try{
+    // console.log(plo);
+// }
+// catch(err){
+    // console.log(err);
+// }
+
+//2 part
+// function abcd2(){
+//     plo2 = 10;
+// }
+// abcd2();
+// console.log(plo2); //10
+
+var squreOfANumber = 10;
+
+//millions of line of code 
+
+
+var squreOfANumber = 20; //very diifficult error tracking
+//the above gives no error -> 
+
+// let
+// const 
+
+/* 
+    let is more strict than var
+    const is more strict than let 
+*/
+// let abcd;
+// let letVariable = 200;
+
+
+/* 
+    we cannot reclare like let 
+    you cannot even reinitialise a const based variable
+    you cannot have a empty declaration of a const based variable -> declare and initialize //
+*/
+// const con; //you cannot leave a const variable empty
+// const con2 = 10;
+// const con3 = 'ewfnejfe'
+// const con4 = false;
+
+
+// function checkCheck(){
+//     var abcd = 10;
+//     console.log(abcd);
+// }
+
+// {
+
+// }
+
+// if(){
+
+// }
+//let and const are block scoped whereas var is function scoped
+
+
+// function test(){
+//     {
+//         let letVariable = 10;
+//         const constVariable = 30;
+//     }
+//         var ab = 20; //
+//         console.log(letVariable); //error
+//         console.log(constVariable);
+//     console.log(ab);
+//     console.log(letVariable); //error
+//     console.log(constVariable);
+    
+// }
+// test();
+// console.log(ab);
+// console.log(letVariable); //error
+// console.log(constVariable);
+
+// var abcd2 = 10; //different 
+// function test1(){
+//     var abcd2 = 30; //differnent
+//     console.log(abcd2);
+//     let variable1 = 10;
+//     {
+//         let variable1 = 40;
+//         var var2 = 30;
+//         const abcd = 20;
+//         console.log(variable1);//40
+//     }
+//     console.log(variable1);//10
+//     console.log(var2);//30
+//     console.log(abcd);//error
+// }
+// console.log(abcd2) //10
+// test1();
+
+// var abcd2 = 10;
+
+// function test(){
+//     // let abcd2 = 10;
+//     var abcd2 = 10;
+//     console.log(abcd2);//
+//     {
+//         var abcd2 = 40;
+//         console.log(abcd2);//
+//     }
+//     {
+//         let abcd2 = 50;
+//         console.log(abcd2);//
+//     }
+//     {
+//         abcd2 = 500;
+//         console.log(abcd2);//
+//     }
+//     {
+//         let abcd2 = 100;
+//         console.log(abcd2);//
+//     }
+//     let abcd3 = 20;
+//     console.log(abcd2);//
+// }
+// test();
+
+/* 
+we cannot have 2 same variable if one of them is let or const declaration in same scope
+*/
+
+// for(var i= 0; i<10; i++){
+//     console.log(i);
+// }
+
+var arr = [10, 20, 
+            [10, 20, 30, [40], [50, 60]]
+        ];
+
+// var decArr2 = [{'naman': 10}, ['abcd', 10, false], [{one: 10}], 1, 2 ,3, 4]
+
+/* arr.length */
+// for(var i= 0; i<arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+//for of -> to iterate over a array 
+//for in
+
+// for()
+
+for(var numb of arr){
+    console.log(numb); //
+    if(Array.isArray(numb)){ //false -> index 0, index1
+        for(var numb2 of numb){
+            console.log(numb2)
+        }
+    }
+}
