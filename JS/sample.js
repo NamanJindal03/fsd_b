@@ -1231,9 +1231,9 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //     console.log(i);
 // }
 
-var arr = [10, 20, 
-            [10, 20, 30, [40], [50, 60]]
-        ];
+// var arr = [10, 20, 
+//             [10, 20, 30, [40], [50, 60]]
+//         ];
 
 // var decArr2 = [{'naman': 10}, ['abcd', 10, false], [{one: 10}], 1, 2 ,3, 4]
 
@@ -1247,11 +1247,194 @@ var arr = [10, 20,
 
 // for()
 
-for(var numb of arr){
-    console.log(numb); //
-    if(Array.isArray(numb)){ //false -> index 0, index1
-        for(var numb2 of numb){
-            console.log(numb2)
-        }
-    }
-}
+// for(var numb of arr){
+//     console.log(numb); //
+//     if(Array.isArray(numb)){ //false -> index 0, index1
+//         for(var numb2 of numb){
+//             console.log(numb2)
+//         }
+//     }
+// }
+
+
+
+// const aFunction = () => {
+//     console.log(var1); //200
+// }
+
+// let var1 = 200;
+
+// aFunction();
+// if(true){
+//     let var1 = 201;
+//     console.log(var1); //201
+// }
+// if(var1%2 === 0){
+//     console.log(var1); //200
+// }
+
+// let a = 10;
+// let a = 10;
+
+//a = undefined -> hoisting??? memory allocation phase
+
+// console.log(a); //undefined???
+// var a = 100;
+
+
+//the phenomenon in which it seems like that javacript has brought the variable declaration at the top of the 
+//SCOPE is referred to as hoisting. 
+/* 
+
+
+*/
+
+// console.log(a); //error -> you cannot access a before the initialization
+
+/* 
+    if the above gives me this error, the how is hoisting happening over here?
+*/
+// const a = 100;
+
+// function tempExplain(){
+//     // console.log(a);
+//     {
+//         console.log(a);
+//         let a = 100;
+//     }
+// }
+
+// function tempExplain(){
+//     console.log(a);//undefined 
+//     // console.log(a); //100
+//     // var a = 100;
+//     {
+//         console.log(a); //100
+//         var a = 100;
+//     }
+// }
+// tempExplain();
+
+
+// function tempExplain(){
+//     let a = 10;
+//     {
+//         console.log(a); //error -> not initlized -> terminated, undefined
+//         a = 100;
+//     }
+//     console.log(a); //10
+// }
+// tempExplain();
+
+
+// function tempExplain(){
+//     let a = 10;
+//     {
+//         let a = 300;
+//         console.log(a);//300
+//     }
+//     {
+//         console.log(a); //10
+//         a = 100;
+//     }
+    
+//     console.log(a);//100
+// }
+// tempExplain();
+
+// let a = 10;
+// function test1(){
+//     //hositin will happen for a -> TDZ
+
+//     /* 
+//         undefined > 5
+//     */
+//     if(a > 5){ //error
+//         console.log(a); //no reach 
+//     }
+//     var a = 200;
+// }
+// test1();
+
+/* 
+    shadowing
+*/
+
+//illegal shadowing -> why illegal? because let and const doesnt allow same variable decaltation in the same scope
+// let a = 10;
+// {
+//     var a = 20; //error
+// }
+
+// //legal shadowing
+
+// var b = 20;
+// {
+//     let b = 200; //no error
+// }
+
+// var c = 100;
+// {
+//     var c = 200; //no error
+// }
+
+// let d = 200;
+// {
+//     let d = 300;//no error
+// }
+
+// var e = 200;
+// function random() {
+//     var e = 300;
+// }
+
+// var f = 200;
+// function random() {
+//     let f = 300;
+// }
+
+// function abcd(){
+//     // let b;
+//     let a = b = 40; //confusing -> 
+//     console.log(a); //40
+//     console.log(b); //40
+// }
+// abcd();
+// console.log(b); //40
+// console.log(a); //error
+
+// {
+//     let a;
+//     console.log(a);
+// }
+// console.log(a);
+
+// let abcd = 10
+
+// let arr = [100, 'string', 'boolean', false, true,   
+//             [10, 20, 30, 40, ['str', abcd]]
+//         ]
+
+// console.log(arr[5][4][1]);
+
+// for(let randomVariableName of arr){
+//     console.log(randomVariableName);
+// }
+
+// let arr2 = [10,20, 30, 40
+//             [20, 30, 40],
+//             [10, 20, 30]
+//             ]
+
+
+
+// let a = function(){
+//     console.log('f')
+// }
+// /* anonymous function express */
+
+// let a = function named(){
+//     console.log('eg')
+// }
+// /* names function expression 
+//  */
