@@ -1438,3 +1438,149 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // }
 // /* names function expression 
 //  */
+
+
+// var arr = [190, 500, 600];//
+// arr.length = 1;
+// arr.push(400); //adding in the end of the array
+// arr.push(20);
+// arr.pop(); //removing from the end of the array
+// arr.push(50);
+
+//[190, 50]
+// console.log(arr);
+// console.log(arr.length)
+
+// arr.shift(); //removing from the start of the array
+// console.log(arr);
+
+// arr.unshift(9000); //adding in the start of the array 
+// console.log(arr);
+
+/* 
+    map
+    reduce
+    filter
+    every
+    slice
+    splice
+*/
+
+//pass by value and pass by reference -> 
+
+// const variable1 = 100;
+// variable1 = 200; //I cannot reassign a const variable
+
+// const arr = [10, 20, 30, 40];
+// arr = [1200];
+// arr.push(50);
+// console.log(arr); //able to update the array as well as no error
+
+/* ]
+    although I was using a const still I was able to update the array. why??
+    the same thing happended in the case of object as well that even though I was using cosnt I could update it.
+
+    why???
+*/
+
+
+// const arr = [10, 20, 30, 40];
+// arr.push(500); //wont throw an error
+// // arr = [10, 20, 30, 40]; //will this throw me an error?
+// const defg = arr;
+
+
+
+
+// const obj = {name: 'naman', age: 10};
+// obj = {} //error
+
+// const arr = [10,20];
+// arr = []; //error
+
+
+// obj.gender = 'male';
+// obj = {};
+// console.log(obj);
+
+
+
+// function sample(arr){
+//     arr.push(10);
+// }
+// const arr = [20, 40];
+// sample(arr);
+
+// console.log(arr); //output?
+
+// function sample2(numb){
+//     numb = 40;
+// }
+
+// const numb = 100;
+// sample2(numb);
+// console.log(numb); //
+
+// function complexCode (arr, obj, numb){
+//     arr = [30, 40, 50];
+//     obj.age = 50;
+//     obj.range = 20;
+//     numb = 90;
+//     return arr;
+// }
+
+// const arr = [10, 20, 30];
+// const obj = {name: 'naman', age: 10};
+// const numb = 50;
+// complexCode(arr, obj, numb);
+
+// console.log(arr);
+// console.log(obj);
+// console.log(numb);
+
+
+// function nest1(arr){
+//     arr = nest2(arr);
+// }
+
+// function nest2(arr){
+//     arr.push(200);
+//     arr.push({});
+//     arr = [200];
+//     return arr;
+// }
+// const arr = [50];
+// nest1(arr);
+// console.log(arr);//50 200 {}
+
+
+// const check1 = 10;
+// check1 = 10;
+// console.log(check1);
+
+
+
+// const arr1 = [10, 20, 30];
+// const arr2 = arr1;
+// arr2.push(40);
+// console.log(arr1);
+// console.log(arr2);
+
+
+
+// const arr1 = [10, 20, 30];
+// const arr3 = arr1;
+// const arr2 = arr1;
+// arr2 = arr3;
+
+// arr2.push(40);
+// console.log(arr1);
+// console.log(arr2);
+// console.log(arr3);
+
+// console.log((+'3') + (+'5'));
+
+console.log(+'3') //integer 3
+console.log('3') //string 3
+
+console.log(3 + 5); ///8 
