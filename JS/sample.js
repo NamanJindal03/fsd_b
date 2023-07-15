@@ -1,7 +1,7 @@
 // var myFirstVariable = 'abcd';
 // console.log(myFirstVariable); //logging
 
-// myFirstVariable = 10; //reinitialize 
+// myFirstVariable = 10; //reinitialize
 // console.log(myFirstVariable);
 
 // myFirstVariable = [];
@@ -13,7 +13,6 @@
 // myFirstVariable = true;
 // console.log(myFirstVariable);
 
-
 // var myFirstVariable = 'now I have changed';
 // console.log(myFirstVariable);
 
@@ -23,12 +22,11 @@
 
 // console.log(myVariable)
 
-// var mySecondVar = 10; 
+// var mySecondVar = 10;
 // console.log(mySecondVar);
 
-
 // var myNum = 10;
-// console.log(typeof (myNum)); 
+// console.log(typeof (myNum));
 
 // var myStr = 'str';
 // console.log(typeof (myStr));
@@ -63,7 +61,7 @@
 // }
 
 // if(a != 10){
-    
+
 // }
 
 // var zerro = null;
@@ -74,7 +72,6 @@
 // else{
 //     console.log('not executed')
 // }
-
 
 // var a = 0;
 
@@ -111,8 +108,8 @@
 // var falsy = '10';
 // var truthy = 0;
 
-// var ans = falsy ? 
-//             ((truthy || -10) ? 10 : 4) 
+// var ans = falsy ?
+//             ((truthy || -10) ? 10 : 4)
 //             : 2;
 // console.log(ans);
 
@@ -136,7 +133,6 @@
 //     console.log('in else')
 // }
 
-
 // function myFunc(myNum, myNum2, myNum3){
 //     console.log(myNum);
 //     console.log(myNum2);
@@ -155,7 +151,6 @@
 // // myFuncVariable()
 // // mySomething()
 // console.log(myFunc);
-
 
 // var variable1 = 10;
 // console.log(variable1);
@@ -186,7 +181,6 @@
 // console.log(temp)
 //in java this will throw me an error and it will say temp not declara
 
-
 // var a = 100;
 
 // var functionVariable = function temp(a){
@@ -211,11 +205,8 @@
 // }
 // var store = tempCall();
 
-
-
 //GLOBAL SCOPE
 // var gl = 100;
-
 
 // function inner1(){
 //     console.log(gl);
@@ -235,14 +226,12 @@
 // console.log(inn1);
 // console.log(inn2);
 
-
 // function abcd(){
 //     var a = 10;
 //     console.log(a)
 // }
 // abcd();
 // console.log(a);
-
 
 // var a = 100;
 // function ran1(){
@@ -262,8 +251,7 @@
 // ran1();
 // ran2();
 
-// 
-
+//
 
 // //Question 2
 // function sample(){
@@ -272,12 +260,9 @@
 // }
 // sample();
 
-
 // //Question 1
 // console.log(y);
 // var y = 200;
-
-
 
 // var x = 200;
 // console.log(x) //200
@@ -289,7 +274,6 @@
 // }
 // exec1();
 // console.log(x)
-
 
 // var x = 200;
 // function exec1(){
@@ -341,13 +325,13 @@
 // console.log(obj3);
 
 // /* Accessing the values of the object */
-// /* 
+// /*
 // dot notation
 // */
 // console.log(obj3.name) //naman
 // console.log(obj3.gender) //male
 
-// /* 
+// /*
 //     square bracket notation
 // */
 // console.log(obj3['age']) //4
@@ -361,8 +345,7 @@
 // obj3['school'] = 'rdps';
 // console.log(obj3);
 
-
-// /* 
+// /*
 // {
 //     "name": "naman",
 //     "age": 4,
@@ -380,8 +363,7 @@
 
 // /*  */
 // var arr =[];
-// arr.length 
-
+// arr.length
 
 // var str = 'this is my first format of string'; //single quotes
 // var str = "this is my first format of string"; //double quotes
@@ -391,7 +373,7 @@
 // // var str = "this is my "first" format of string"; //error
 
 // var str = 'this is my "first" format of string'; //single quotes, double quotes inside
-// /* 
+// /*
 //     If I am dealing with single quotes and double quotes, If I ened to contcatenate the variables,
 //     I need to quit the quote whereas in the case of tilde this is not needed
 // */
@@ -409,9 +391,6 @@
     whenever you are delaing with a lot of variables use ` -> 
 
 */
-
-
-
 
 // function abcd(){
 //     //normal funciton or function declaration
@@ -437,7 +416,7 @@
 // let abcd = 10;
 // console.log(`this is my outer ${abcd + 10+ 20+ 50}`);  //20
 
-// 5 -> 
+// 5 ->
 
 // 5  6
 /* 
@@ -463,7 +442,6 @@
 // console.log(abcd);
 // outer();
 
-
 // function parent(){
 //     var sample = 'sam';
 //     hoisted()
@@ -476,7 +454,6 @@
 // }
 
 // console.log(parent()); //
-
 
 // function parent(){
 //     var sample = 'sam';
@@ -499,8 +476,6 @@
 console -> 
 */
 
-
-
 // function parentCheck(){
 //     var check = function check2(){
 //         console.log('check 2')
@@ -509,11 +484,7 @@ console ->
 //     return functionReturn;
 // }
 
-
 // parentCheck();
-
-
-
 
 /* 
     Backend -> node (express)
@@ -539,7 +510,6 @@ console ->
 //     //return hoisted();
 // }
 // parent10()
-
 
 // function parent(){
 //     var sample = 'sam';
@@ -571,14 +541,12 @@ console ->
 //     var2 = test2();
 //     console.log(var2);//
 //     console.log(var1);//
-    
+
 // }
 // function test2(){
 //     var1 = 30;
 // }
 // test1();
-
-
 
 // var var1 = 20;
 // function test1(){
@@ -591,11 +559,10 @@ console ->
 //         var1 = 30;
 //         return var1;
 //     }
-    
+
 // }
 
 // test1();
-
 
 // (function normalFunc(){
 //     console.log('abcd');
@@ -603,7 +570,7 @@ console ->
 
 // (function normalFunc3(var2){
 //     console.log(var2);
-// })(50); 
+// })(50);
 
 // var funcExpression = function normalFunc3(var2){
 //     console.log(var2)
@@ -616,7 +583,7 @@ console ->
 // normalFunc4(10);
 
 // normalFunc();
-// normalFunc(); //calling // invoking 
+// normalFunc(); //calling // invoking
 
 // var functionExpression = function abcd(){
 //     console.log('abcd');
@@ -626,7 +593,6 @@ console ->
 //     console.log('abcd2');
 // }
 // funcitonExpression2();
-
 
 //differenfcec between callling a function and referencing a function
 
@@ -654,15 +620,11 @@ console ->
 
 // console.log(passingFunc());//
 
-
-
 // function mainFuncTest(numb){
 //     console.log(numb);
 // }
 // var testVar = 10;
 // mainFuncTest(testVar)
-
-
 
 // var testFunc = function(){
 //     console.log('random')
@@ -678,7 +640,6 @@ console ->
 
 // }
 
-
 // var testFunc2 = function test(){
 //     console.log('random')
 
@@ -688,7 +649,6 @@ console ->
 // console.log(testFunc()) //
 // console.log(testFunc3()) //
 // console.log(testFunc4()) //
-
 
 // var x = 10;
 // console.log(x); //10
@@ -702,7 +662,6 @@ console ->
 // }
 // console.log(x); //10
 
-
 // var temp = function (){
 //     console.log('first');
 // }
@@ -711,9 +670,7 @@ console ->
 //     console.log('second');
 //     return cb;
 // }
-// console.log(temp2(temp)); 
-
-
+// console.log(temp2(temp));
 
 // function temp1(){
 //     function temp2(){
@@ -812,7 +769,6 @@ console ->
 //     console.log('i am first')
 // }
 
-
 // higherOrderFunction(firstClassFunc);
 
 // higherOrderFunction(function (){
@@ -832,7 +788,7 @@ console ->
 
 // isEvenNumber(10)
 
-// //step1 
+// //step1
 // function isEvenNumber(numb){
 //     return numb%2 === 0;
 // }
@@ -848,8 +804,7 @@ console ->
 // }
 
 //step 4
-// var isEvenNumber = numb => numb%2 ===0; 
-
+// var isEvenNumber = numb => numb%2 ===0;
 
 // var isEvenNumber = numb => 100;  //there is a auto return applied
 /* 
@@ -859,7 +814,6 @@ console ->
 
 // var returnValueOfTheFunc = isEvenNumber(99);
 // console.log(returnValueOfTheFunc)
-
 
 // var funcDemo = num =>{
 //     return 'hello'
@@ -871,7 +825,7 @@ console ->
 // function exec1(){
 // //x : undeifned
 //     if(x > 10){
-//          var x = 50; //it won't go inside 
+//          var x = 50; //it won't go inside
 //     }
 //     console.log(x);//undefined
 // }
@@ -895,13 +849,13 @@ console ->
 // }
 // console.log( A() && (C() || B()));
 
-//var variable_2; 
+//var variable_2;
 // var variable = 10;
 // (()=>{
 //     variable_3 = 35;
 //     console.log(variable_3);
 //     var variable_3 = 45;
-//     variable_2 = 15; //var 
+//     variable_2 = 15; //var
 //     console.log(variable);
 
 // })();
@@ -919,7 +873,7 @@ console ->
 
 */
 
-// var isEvenNumber = numb => numb%2 ===0; 
+// var isEvenNumber = numb => numb%2 ===0;
 
 // var isEvenNumber = numb => console.log('abcd');  //there is a auto return applied
 
@@ -952,7 +906,6 @@ console ->
 
 */
 
-
 // function A(){
 //     console.log('called A');
 //     return false;
@@ -976,7 +929,6 @@ console ->
 
 // var returnVal = sample();
 // console.log(returnVal);
-
 
 // function hof(cb, cb2) {
 //     cb();
@@ -1009,7 +961,6 @@ console ->
 
 */
 
-
 // function hof2(cb, numb){
 //     //this hof2 can only take number greater than 100 as the second argument
 //     try{
@@ -1036,16 +987,15 @@ console ->
 
 // }
 
-
 // var abcd = () => "hello"
 
-// var y = 200;//parent 
+// var y = 200;//parent
 // function exec1(){
-//     /* 
+//     /*
 //         memory x: 50
 //     */
-//    /* 
-   
+//    /*
+
 //     y is taken from heirarchial lexical order
 //    */
 //     if(y > 10){ //200 > 10
@@ -1055,8 +1005,6 @@ console ->
 // }
 // exec1();
 // console.log(x);//error
-
-
 
 // function hof2(sumCb, numb){
 //     //this hof2 can only take number greater than 100 as the second argument
@@ -1074,7 +1022,7 @@ console ->
 //         //     throw new Error('Something went wrong, our system is facing technical difficulties')
 //         // }
 //         // orderPlaced();
-//     }   
+//     }
 //     catch( error){
 //         console.log(`hof2 cb error: ${error}`);
 //     }
@@ -1102,10 +1050,10 @@ console ->
 // }
 // abcd();
 // try{
-    // console.log(plo);
+// console.log(plo);
 // }
 // catch(err){
-    // console.log(err);
+// console.log(err);
 // }
 
 //2 part
@@ -1117,14 +1065,13 @@ console ->
 
 var squreOfANumber = 10;
 
-//millions of line of code 
-
+//millions of line of code
 
 var squreOfANumber = 20; //very diifficult error tracking
-//the above gives no error -> 
+//the above gives no error ->
 
 // let
-// const 
+// const
 
 /* 
     let is more strict than var
@@ -1132,7 +1079,6 @@ var squreOfANumber = 20; //very diifficult error tracking
 */
 // let abcd;
 // let letVariable = 200;
-
 
 /* 
     we cannot reclare like let 
@@ -1143,7 +1089,6 @@ var squreOfANumber = 20; //very diifficult error tracking
 // const con2 = 10;
 // const con3 = 'ewfnejfe'
 // const con4 = false;
-
 
 // function checkCheck(){
 //     var abcd = 10;
@@ -1159,7 +1104,6 @@ var squreOfANumber = 20; //very diifficult error tracking
 // }
 //let and const are block scoped whereas var is function scoped
 
-
 // function test(){
 //     {
 //         let letVariable = 10;
@@ -1171,14 +1115,14 @@ var squreOfANumber = 20; //very diifficult error tracking
 //     console.log(ab);
 //     console.log(letVariable); //error
 //     console.log(constVariable);
-    
+
 // }
 // test();
 // console.log(ab);
 // console.log(letVariable); //error
 // console.log(constVariable);
 
-// var abcd2 = 10; //different 
+// var abcd2 = 10; //different
 // function test1(){
 //     var abcd2 = 30; //differnent
 //     console.log(abcd2);
@@ -1231,7 +1175,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //     console.log(i);
 // }
 
-// var arr = [10, 20, 
+// var arr = [10, 20,
 //             [10, 20, 30, [40], [50, 60]]
 //         ];
 
@@ -1242,7 +1186,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //     console.log(arr[i]);
 // }
 
-//for of -> to iterate over a array 
+//for of -> to iterate over a array
 //for in
 
 // for()
@@ -1255,8 +1199,6 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //         }
 //     }
 // }
-
-
 
 // const aFunction = () => {
 //     console.log(var1); //200
@@ -1281,9 +1223,8 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // console.log(a); //undefined???
 // var a = 100;
 
-
-//the phenomenon in which it seems like that javacript has brought the variable declaration at the top of the 
-//SCOPE is referred to as hoisting. 
+//the phenomenon in which it seems like that javacript has brought the variable declaration at the top of the
+//SCOPE is referred to as hoisting.
 /* 
 
 
@@ -1305,7 +1246,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // }
 
 // function tempExplain(){
-//     console.log(a);//undefined 
+//     console.log(a);//undefined
 //     // console.log(a); //100
 //     // var a = 100;
 //     {
@@ -1314,7 +1255,6 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //     }
 // }
 // tempExplain();
-
 
 // function tempExplain(){
 //     let a = 10;
@@ -1326,7 +1266,6 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // }
 // tempExplain();
 
-
 // function tempExplain(){
 //     let a = 10;
 //     {
@@ -1337,7 +1276,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //         console.log(a); //10
 //         a = 100;
 //     }
-    
+
 //     console.log(a);//100
 // }
 // tempExplain();
@@ -1346,11 +1285,11 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // function test1(){
 //     //hositin will happen for a -> TDZ
 
-//     /* 
+//     /*
 //         undefined > 5
 //     */
 //     if(a > 5){ //error
-//         console.log(a); //no reach 
+//         console.log(a); //no reach
 //     }
 //     var a = 200;
 // }
@@ -1395,7 +1334,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 
 // function abcd(){
 //     // let b;
-//     let a = b = 40; //confusing -> 
+//     let a = b = 40; //confusing ->
 //     console.log(a); //40
 //     console.log(b); //40
 // }
@@ -1411,7 +1350,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 
 // let abcd = 10
 
-// let arr = [100, 'string', 'boolean', false, true,   
+// let arr = [100, 'string', 'boolean', false, true,
 //             [10, 20, 30, 40, ['str', abcd]]
 //         ]
 
@@ -1426,8 +1365,6 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //             [10, 20, 30]
 //             ]
 
-
-
 // let a = function(){
 //     console.log('f')
 // }
@@ -1436,9 +1373,8 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // let a = function named(){
 //     console.log('eg')
 // }
-// /* names function expression 
+// /* names function expression
 //  */
-
 
 // var arr = [190, 500, 600];//
 // arr.length = 1;
@@ -1454,7 +1390,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // arr.shift(); //removing from the start of the array
 // console.log(arr);
 
-// arr.unshift(9000); //adding in the start of the array 
+// arr.unshift(9000); //adding in the start of the array
 // console.log(arr);
 
 /* 
@@ -1466,7 +1402,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
     splice
 */
 
-//pass by value and pass by reference -> 
+//pass by value and pass by reference ->
 
 // const variable1 = 100;
 // variable1 = 200; //I cannot reassign a const variable
@@ -1483,14 +1419,10 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
     why???
 */
 
-
 // const arr = [10, 20, 30, 40];
 // arr.push(500); //wont throw an error
 // // arr = [10, 20, 30, 40]; //will this throw me an error?
 // const defg = arr;
-
-
-
 
 // const obj = {name: 'naman', age: 10};
 // obj = {} //error
@@ -1498,12 +1430,9 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // const arr = [10,20];
 // arr = []; //error
 
-
 // obj.gender = 'male';
 // obj = {};
 // console.log(obj);
-
-
 
 // function sample(arr){
 //     arr.push(10);
@@ -1521,7 +1450,8 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // sample2(numb);
 // console.log(numb); //
 
-// function complexCode (arr, obj, numb){
+// function complexCode (arr, obj, numb){ //whenever you declare a paramater in a funciton in js, that basicalls
+//     //acts as var
 //     arr = [30, 40, 50];
 //     obj.age = 50;
 //     obj.range = 20;
@@ -1538,7 +1468,6 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // console.log(obj);
 // console.log(numb);
 
-
 // function nest1(arr){
 //     arr = nest2(arr);
 // }
@@ -1553,20 +1482,15 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // nest1(arr);
 // console.log(arr);//50 200 {}
 
-
 // const check1 = 10;
 // check1 = 10;
 // console.log(check1);
-
-
 
 // const arr1 = [10, 20, 30];
 // const arr2 = arr1;
 // arr2.push(40);
 // console.log(arr1);
 // console.log(arr2);
-
-
 
 // const arr1 = [10, 20, 30];
 // const arr3 = arr1;
@@ -1580,7 +1504,405 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 
 // console.log((+'3') + (+'5'));
 
-console.log(+'3') //integer 3
-console.log('3') //string 3
+// console.log(+'3') //integer 3
+// console.log('3') //string 3
 
-console.log(3 + 5); ///8 
+// console.log(3 + 5); ///8
+
+// const arr = [true, false, [1,3,4, function() {console.log('abcd')}], {name: 'naman', age: 10}];
+// // console.log(arr[1]);
+// // console.log(arr[2][2]);
+// console.log(arr[2][3]);
+
+// const abcd = [10, 20]; //&101
+// let defg = abcd; //&101
+// defg.push(100);
+// console.log(defg); //[10, 20, 100]
+// console.log(abcd);//[10, 20, 100]
+
+// function sample(abcd, obj, numb){
+//     //abcd, obj => references
+//     //numb => pass by value
+// }
+
+// const a = [];
+// const b = [];
+// console.log(a === b); //false
+// console.log(a == b); //false
+
+// const a = [20];
+// const b = [20];
+// console.log(a[0] == b[0]); //true
+// console.log(a[0] === b[0]); //true
+
+// const c = [20];
+// const d = [30];
+// console.log(c[0] == d[0]); //false
+// console.log(c[0] === d[0]); //false
+// console.log(typeof c)
+// console.log(typeof c === typeof d);
+
+//'object' === 'object'
+
+// typeof 10;
+// typeof 'str';
+// typeof true;
+
+/* 
+    All arrays in javacript are objects -> 
+        all arrays in js are derived from an object -> 
+
+            prototype -> 
+*/
+
+// const c = [20];
+// const d = [30];
+// const e = {name: 'naman'};
+// console.log(Array.isArray(c)); //remember
+// console.log(Array.isArray(e)); //remember
+
+//string and array => split and join
+
+// const str = 'javascript';
+// console.log(str[6])
+
+// const str = 'javascript';  //['j', 'a', 'v' ..........]
+// const arrStr = str.split();
+// console.log(arrStr);
+
+// const str = 'ja va script';  //['j', 'a', 'v' ..........]
+// const arrStr = str.split(' ');
+// console.log(arrStr);
+
+// const str = 'ja va scvripvt';  //['j', 'a', 'v' ..........]
+// const arrStr = str.split('v');
+// console.log(arrStr);
+// arrStr.push(1);
+
+// const str = "java, is a diffrenet, language, from javascript";
+// const arrStr = str.split(",");
+// console.log(arrStr);
+
+// const str = "javascript "
+
+// const str1 = "value "
+
+// // console.log(str + str1) //yh add krna h one line m with split esi ho skta h kyaa sir
+// //javascript value
+
+// const concatenaedArray = (str.trim() + " " + str1.trim()).split(' ');
+// console.log(concatenaedArray);
+
+// const str =  "     rifjewiofjiefdjwe ewfnewfjeifew          ";
+// console.log(str.length);
+// console.log(str.trim().length); //very important and useful function
+
+/* 
+    Applicattions -> 
+        form -> 
+*/
+
+// const str = "java, is a diffrenet, language, from javascript";
+// const arrStr = str.split("#"); //str.split()
+// console.log(arrStr);
+
+/* 
+    we basically converted a string into array
+
+    the viceversa of it is join -> whre we convert the array into string
+*/
+
+// const normalArr = ['java', 'is a diffrenet' ,'language from javascript', ['a', 'b', 'c', [true, false]]];
+// // const str = normalArr.join(); //, acts as the default value
+// const str = normalArr.join(' ');
+// console.log(str);
+
+/* 
+    split
+    join
+    pusuh
+    pop
+    length
+    unshift
+    shift
+*/
+
+/* 
+    Spread Operator  -> ...
+*/
+
+// const arr = [10, 20, 30, 40];
+// const arr2 = [100, 200, 300, 400, {name: 'naman', age: 10}];
+// const arr3 = [800, [10, 20, 30], 300, true];
+// const
+// // const combined = []
+
+// const arr3 = arr.join();
+// const aa3 = arr2.join();
+
+// console.log(arr3.split(","));
+
+// const arr = [10, 20, 30];
+// const arr2 = [100, 200, 300];
+// const arr3 = arr.join(",") + "," + arr2.join(",");
+// console.log(arr3);
+
+// console.log(arr3.split(","));
+
+// console.log(arr3);
+// const combined = [...arr, ...arr2];
+// const combined = [...arr, ...arr2, ...arr3];
+// console.log(combined);
+// const copyArr = [...arr];
+// copyArr[0] = 200;
+// console.log(copyArr);
+// console.log(arr);
+
+// Argument vs parameter ->
+
+// function abcdc(num){
+
+// }
+// abcdc(10);
+
+// function print(){
+
+//     console.log("hi ,i am printed on console");
+
+// }
+
+//     print(); //exexuting the function
+//     console.log(print);  //referencing the function -> it prints the function defination
+
+//     function hof(cb){
+//         console.log(cb);
+//     }
+//     hof(print)
+
+//hof -> the funciton that can receive antoher function as parameter or they return a funciton 
+// function div(a,b){
+
+//     const value = a/b;
+    
+//     console.log(value);
+    
+//     }
+// function add(a, b) {
+//   const value = a + b;
+
+//   return value;
+// }
+
+// function maths(operator, x, y) {
+//   operator(x, y);
+// }
+
+// maths(div, 10, 20);
+
+// console.log(maths(add(), 10, 20));
+
+// function abcd(){
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     // console.log('some sgtring')
+//     let abcd2 = 10;
+//     var abcd3;
+//     let a = 20;
+//     var b = 400;
+//     console.log(a);
+//     console.log(b);
+//     console.log(abcd3);
+// }
+
+// abcd();
+
+// function sample(cb, numb){
+//     console.log(cb);
+//     console.log(numb);
+// }
+
+// function sampleChild(){
+//     return 100;
+// }
+
+// sample(sampleChild(), 500);
+
+//spread -> ...
+//rest operator -> ...
+
+// const arr1 = [10, 20, 30];
+// const arr2 = [10, 20, 40];
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
+
+// function restCheck(var1, ...val ){
+    
+//     // console.log(val[0]); //
+//     // console.log(val[1]); //
+//     // console.log(val[2]); //
+//     // console.log(var1); //
+//     // console.log(val[10])
+// }
+// // function check(var1, var2, var3){
+
+// // }
+
+// restCheck(1, 2, 3);
+
+//destructing 
+
+// const a = [10, 20, 30];
+// const [i, j, k] = a;
+// console.log(i)
+// console.log(j)
+// console.log(k)
+
+// const [var1, var2, var3] = [100, 200, 300];
+
+// const var4 = a[0];
+// const var5 = a[1];
+// const var6 = a[2];
+
+// const [var7,var8,var9] = a;
+// const func = (a) => {
+//     return 4 + a;
+// };
+// const func = ((a) => {
+//     return 4 + a;
+// })();
+
+// const obj = {name: 'naman'};
+
+// const [fun, random] = [func(4), obj];
+
+// console.log(fun);
+// console.log(random);
+
+
+// const arr2 = [{name: 'naman'}, {age: 10}, {gender: 'male', ply: true}];
+// arr2[0];
+
+// const a = 10;
+// const b = 20;
+// const c = 30;
+// const obj = {name: 'naman'}
+
+// const variableBasedArr = [a, b, c, obj['name']];
+// console.log(variableBasedArr); //[10, 20, 30]
+
+// function sample2(){
+//     return 4;
+// }
+
+// function sample(){
+//     return [sample2, 
+//         (
+//             ()=> 5
+//         )()
+//     ];
+// }
+// const returnCheck = sample();
+
+// const [f1, f2] = 
+// console.log(f1);
+// console.log(f2);
+
+
+// function abcd(){
+
+// }
+// const test2 = () => {
+//     return 10;
+// }
+// const test3 = () => {
+//     const a = 10;
+//     const b = 20;
+//     return a+b;
+// }
+
+// const test4 = () => 10;
+
+// const test5 = abcd => abcd + 20; //if we are dealing with strictly one parameter
+
+// const test6 = => 20; //error
+
+// const test7 = abcd, abcd2 => abcd + abcd2;//error
+ 
+// const weirdFuncDefination = abcd => abcd;
+// const returnFunc = weirdFuncDefination(2);
+// console.log(returnFunc);
+
+// function sample2(){
+//     return 4;
+// }
+
+// function sample(){
+//     return [sample2, 
+//         (
+//             ()=> 5
+//         )(),
+//         () => 10,
+//         abcd => abcd
+//     ];
+// }
+// //[()=>{}, function abcd(){}, ]
+// // const returnCheck = sample();
+// const [a1, a2, a3, a4, a5] = sample();
+// console.log(a1);
+// console.log(a2);
+// console.log(a3(10));
+// console.log(a4(2));
+// console.log(a5);
+
+// const [a, b, c, d] = [10, 20];
+// console.log(a)
+// console.log(b)
+// console.log(c)
+// console.log(d)
+
+// const [i, j, ...check] = [10, 20, 30, 40, 50];
+// console.log(i);
+// console.log(j);
+// console.log(check);//
+
+
+// function sample(){
+//     return [true, ()=>{}, 5];
+// }
+// const [...arr] = sample(); //spread operat
+// console.log(arr[1]); //
+
+//concat and reverse -> functions/methods in js
+
+// const [a, b, ...restTest] = [10, 20, 30, 40 , 50];
+
+
+// const arr = [10, 20, 30];
+// const arr2 = [40, 50, 60];
+// const arr4 = [100, 200, 300];
+// const arr3 = arr.concat(arr2, arr4);
+// //const arr3 = [...arr, arr2]; //spread operator
+// console.log(arr3);
+
+// const strArr = ['abcd', 'defg', 'plplplpl', 'ewhfuefewhf'];
+// strArr.reverse();
+// console.log(strArr);
+
+
+// strArr.length//
+/* 
+    1) changes the orignal array
+    2) doesnt chanfge the original array, returns you the changed thing
+
+*/
