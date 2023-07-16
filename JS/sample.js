@@ -1906,3 +1906,206 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
     2) doesnt chanfge the original array, returns you the changed thing
 
 */
+
+
+// function abcd (a=10, b=20){
+
+// }
+// abcd(40, 50);
+
+// function abcd (a, b, c,d ){
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+//     console.log(d)
+// }
+// abcd()
+
+
+// const [a,b,c, d] = [10,20, 30]
+
+/* 
+    replace the values of two variables => 
+    const a = 10;
+    const b = 20;
+    //write your own code
+    const temp = a, 
+    a = b, 
+    b = temp
+
+    console.log(a) //20
+    cosnole.llog(b) //10
+
+    //do the above thing with destructing (-----)
+
+*/
+// function swapElements (cb, numb, numb2){
+
+// }
+// swapElements(myArray, 0, 1);
+
+// let a = 20;
+// let b = 30;
+// //I want the swap of them to happen using destructing concept 
+
+// //restriction - you cannot have another variable defined : hint destrucitng
+
+// [a,b] = [b,a]; //this is the smallest code to swap things in JS. 
+// console.log(a, b);
+// const arr2 = [200, 400];
+// const [abcd, defg] = arr2;
+// const abcd2 = arr2[0];
+// const defg2 = arr2[1];
+
+// abcd = 20;
+// defg = 40;
+
+// const arr = [10, 20, 30];
+
+// const arr = [10, 20, 30, 40];
+// // const slicedArr = arr.slice(1);
+
+// // console.log(slicedArr);
+// // console.log(arr);
+
+// // console.log(arr.slice(3)); //
+// // console.log(arr.slice(0)); //
+// const something = arr.slice(0);
+
+///side task
+// console.log(something == arr); //
+
+// console.log([] === []); //
+// console.log([] == []); //
+
+// console.log({} === {});
+// console.log({} == {});
+
+// const a = {};
+// const b = a;
+// console.log(a === b);
+
+
+// const arr = [10, 20, 30, 40, 50, 60, 70 , 80];
+// const slicedArr = arr.slice(1);
+
+// console.log(slicedArr);
+// console.log(arr);
+
+// console.log(arr.slice(3)); //
+// console.log(arr.slice(0)); //
+// const something = arr.slice(0);
+
+/* 
+    slice(<starting index>, <ending index> (non inclusive))
+*/
+/* 
+    In js whenever we are dealing with a range sort of sitation the ending index is always non inclusive
+*/
+// const arr = [10, 20, 30, 40, 50, 60, 70 , 80];
+// const slicedArr = arr.slice(1, 4);
+// console.log(slicedArr);
+
+// const sliced2 = arr.slice(0, arr.length); //
+// const sliced3 = arr.slice(2,2);
+// const sliced4 = arr.slice(); //arr.slice(0);
+// console.log(sliced2);
+// console.log(sliced3);
+// console.log(sliced4);
+
+// console.log(arr.slice(-1));
+
+// console.log(arr.slice(-3)); //1
+// console.log(arr.slice(-3,-1)); //2
+// console.log(arr.slice(-4, arr.length));//3
+// console.log(arr.slice(-1, -4));//4
+
+//splice -> //splice leads to change of original array -> 
+
+
+// const arr = [10, 20, 30, 40, 50 , 60];
+// arr.splice(2);
+// console.log(arr);
+
+// arr.splice(2, 4);
+// console.log(arr)
+
+// arr.splice(2,2);//
+// console.log(arr);
+
+// arr.splice(2, 1, 'changed');
+// console.log(arr);
+
+// arr.splice(2,2, 'changed1', 'changed2');
+// console.log(arr);
+// arr.splice(2,2, 'changed1');
+// console.log(arr);
+
+// arr.splice(arr.length-2, 'arr');
+// console.log(arr);
+
+// arr.splice(<starting_index>, <no_of_values>);
+
+// const arr = [10, 20, 30, 40, 50 , 60];
+// const deletedArr = arr.splice(4); //
+// console.log(deletedArr);
+// const deletedArr = arr.splice(2,2,'ch1', 'ch2');
+// console.log(deletedArr);//
+// console.log(arr);//
+
+// const deletedArr = arr.splice(2, 1, 'check1', 'check2', 'check3', 'check4');
+// const deletedArr = arr.splice(2, 0, 'check1', 'check2', 'check3');
+// console.log(arr);
+// console.log(deletedArr);
+
+// const arr = [10, 20, 30, 40, 50 , 60];
+// const deletedArr1 = arr.splice(2,2, 100, 200);
+//[10, 20, 100, 200, 50, 60] //[30, 40]
+
+// const deletedArr2 = arr.splice(1,1, 500);
+// const deletedArr3 = arr.splice(3, 2, 10, 20, 30, 40);
+// console.log(deletedArr3);
+// console.log(arr);
+
+
+
+/* 3 coding quesitons ->  */
+
+/* 
+    one -> rest -> 1 complete approach and 1 partial approach 
+*/
+
+
+
+
+
+/* 
+    1) 
+    2) 
+    3) change in array, also get a new value return 
+
+*/
+
+// real world applications of higher order functions -> 
+/* 
+    every
+    filter
+    reduce
+    map -> ***************
+
+    and many more -> 
+
+    browser -> addEventListener
+*/
+//
+
+//indexOf //lastIndexOf
+
+// const arr = ['a', 'b', 'c', 'd', 'a', 'a', 'a'];
+// const indexx = arr.indexOf('a');
+// console.log(indexx);
+
+// const lastINdex = arr.lastIndexOf('a');
+// console.log(lastINdex);
+
+
