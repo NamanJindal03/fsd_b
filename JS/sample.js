@@ -2109,3 +2109,103 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // console.log(lastINdex);
 
 
+
+// function hof(numb, cb) {
+//     for(let i=0; i<2; i++){
+//         cb(numb+i);
+//     }
+// }
+
+// hof(10, (numb)=>{
+//     console.log('execute this', numb)
+// })
+
+// hof(20, (newVal) => {
+//     console.log('new exec', newVal);
+// })
+
+//every -> returns  boolean value
+
+// const isEven = (numb) => {
+//     return !(numb%2);
+// }
+
+// const isOdd = (numb) => {
+//     return (numb%2);
+// }
+// const arr = [2,4,6,8];
+
+// const result = arr.every(cb);
+
+
+// const result2 = [2,4,6,8].every(cb)
+// console.log(result);
+
+
+//two kinds of map in js -> map datastructure (we havent discussed) && set
+//map is also a hof -> which kind of resembles a loop 
+
+//map -> 
+// const arr = [2, 4, 6, 8];
+
+// const result = arr.map((val)=>{
+//     //map -> loop -> 
+//     function addNumber10(){
+//         return val + 20;
+//     }
+//     let newNum = addNumber10(val);
+//     console.log(newNum);
+// }) //arguments 
+
+
+// const arr = [2, 4];
+// // const bol = 10;
+
+// const cbFunc = (val, index, completeArr )=>{
+//     // console.log(val + 2);
+//     // return [val + index, index];
+//     // console.log(completeArr);
+//     return (function(){
+//         return 10;
+//     })
+    
+// }
+
+// const result = arr.map(cbFunc) ;
+// console.log(result[1]());//
+
+// console.log(result); //2167 -> 
+
+// const cb = (index, val) => {
+//     if(!(val % 2)){
+//         return index;
+//     }
+//     return val;
+// }
+
+// const result = [100, 150, 201, 400].map(cb);
+// console.log(result)
+
+// [[100, 150, 201, 400], [400]].map(cb);
+
+// function cb(val , index){
+//     console.log(val);
+// }
+
+
+//Filter -> it is called upon an array, it takes a callback, whatever values passes the criteria of the callback gets
+//return in the form of an array | filter also returns you an array
+
+// const arr = [2,5, 7, 100];
+
+// const result = arr.filter((val)=>{
+//     return ! (val == 7); 
+// })
+// console.log(result);
+
+const arr = [true, false,true, false];
+
+const result = arr.filter((val)=>{
+    return true; 
+})
+console.log(result);//
