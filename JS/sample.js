@@ -2133,7 +2133,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // const isOdd = (numb) => {
 //     return (numb%2);
 // }
-// const arr = [2,4,6,8];
+// const arr = [2,4,6,9];
 
 // const result = arr.every(cb);
 
@@ -2145,7 +2145,7 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //two kinds of map in js -> map datastructure (we havent discussed) && set
 //map is also a hof -> which kind of resembles a loop 
 
-//map -> 
+//map -> map always returns an array
 // const arr = [2, 4, 6, 8];
 
 // const result = arr.map((val)=>{
@@ -2156,6 +2156,10 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 //     let newNum = addNumber10(val);
 //     console.log(newNum);
 // }) //arguments 
+
+/* 
+    React -> you wont be able to effectively code in React without map -> 
+*/
 
 
 // const arr = [2, 4];
@@ -2203,9 +2207,686 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 // })
 // console.log(result);
 
-const arr = [true, false,true, false];
+// const arr = [true, false,true, false];
 
-const result = arr.filter((val)=>{
-    return true; 
-})
-console.log(result);//
+// const result = arr.filter((val)=>{
+//     return true; 
+// })
+// console.log(result);//
+
+/* 
+    Reduce  ->>> 
+*/
+// const arr = [1,2,3,4,5];
+
+// const returned = arr.reduce((prev, current)=>{
+//     console.log('prev ', prev);
+//     console.log('current ', current);
+//     return prev + current;
+// },4) //callback, starting value
+// console.log(returned);
+
+
+// const arr = [1,2,3];
+
+// const returned = arr.reduce(function(prev, curr){
+//     return ((prev * curr) -prev)
+// }, 100) //callback, starting value
+
+// console.log(returned);
+
+
+// const arr = [7, 11, 18];
+
+// const returned = arr.reduce(function (p, c){
+//     if(c > p){
+//         return c;
+//     }
+//     return p
+// }, 12);
+
+// console.log(returned)//
+
+// const arr = [7, 11, 18];
+
+// const returned = arr.reduce(function (p, c){
+//     // if(c > p){
+//     //     return c;
+//     // }
+//     // return p
+//     console.log(p, ' ', c);
+// });
+
+// console.log(returned)//
+
+// const arr = [7, 11, 18];
+
+// const returned = arr.reduce(function (p, c){
+//     // if(c > p){
+//     //     return c;
+//     // }
+//     // return p
+//     return p+c;
+// });
+
+// console.log(returned)//
+
+
+// const arr = [7, 11, 18];
+
+// const returned = arr.reduce(function (p, c, index, completeArray){
+//     // if(c > p){
+//     //     return c;
+//     // }
+//     // return p
+//     console.log(`${p}, ${c}, ${index}, ${completeArray}`);
+// });
+
+// console.log(returned)//
+
+// const arr = [7, 11, 18];
+
+// const returned = arr.reduce(function (p, c, index, completeArray){
+//     // if(c > p){
+//     //     return c;
+//     // }
+//     // return p
+//     if(p){
+//         return completeArray.length+ index;
+//     }
+//     else{
+//         return !c;
+//     }
+// }, 20);
+
+// console.log(returned) //
+
+/* 
+    Level 2 -> How can you make your own custom every, filter, map, reduce 
+*/
+
+
+/// prototype -> 
+//code 1
+// function customEvery(arr, cb){
+//     //write logic over here such that it return whatever your JS inbuilt
+//     // method every return
+//     //PS: you cannot call every in here
+
+//     // for(let i=0; i<arr.length; i++){
+//     //     if(!cb(arr[i])){
+//     //         return false;
+//     //     }
+//     // }
+//     // return true;
+// }
+
+// function customEvery(arr, cb){
+    
+// }
+
+// const arr = [2,4,6,9];
+// const ans2 = customEvery(arr, (val)=>{
+//     // return !(val%2);
+//     return 2;
+// });
+// console.log(ans2);//
+
+// //step 1 -> I need to call the callback -> 
+
+// const ownArray = [true, false, true, true, true];
+// function hof(cb, ownArray2){
+//     for(let i=0; i<ownArray2.length; i++){
+//         const newValue = cb(ownArray2[i]);
+//         // if(newValue){
+//         //     console.log('truthy');
+//         //     count++;
+//         // }
+//         // if(!newValue){
+//         //     console.log('falsy')
+//         // }
+//         if(!newValue){
+//             return false;
+//         }
+//     }
+//     return true;
+//     //
+//     // console.log(count); //5
+//     // if(count === ownArray2.length) {
+//     //     return true
+//     // }
+// }
+
+// const answer = hof(()=>{
+//     console.log(10);
+// })
+// const childFunc = (a) => {
+//     return a;
+// }
+// const answer2 = hof(childFunc, ownArray);
+
+// function hof2(numb){
+    
+// }
+// const answer3 = hof2(10)
+
+
+
+// const a = [{key: 'name', value: 'naman'}, {key:'age', value: 10}]; 
+
+/* 
+    {
+        name: 'naman',
+        age: 10
+    }
+
+    for of ->
+
+    reduce -> 
+
+    initial value -> {}
+
+    map ->
+    filter ->
+    find ->
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//code 2
+// const ans1 = arr.every((val)=>{
+//     // return !(val%2);
+//     return 2;
+// })
+// console.log(ans1);//
+
+
+// const reply = [2,4,6,8, 10, 20, 30].map((val, index)=>{
+//     return !val;
+// })
+// console.log(reply)
+//reply -> [12, 14, 16, 18];
+
+/* 
+    step 1 -> iterating over the array 
+    step 2 -> call the cb and pass it arr value, index and the array
+    step 3 -> push the returned value of the callback in an array
+    step 4 -> once the loop is over return the newly generated array
+*/
+// const arr = [2,4,6,8, 10, 20, 30];
+
+// const reply2 = customMap(arr, (val, index)=>{
+//     return val + 10;
+// } )
+
+// function customMap(arr, cb ){
+//     const tempInternalArray = [];
+//     for(let i=0; i<arr.length; i++){
+//         const returnCallbackValue = cb(arr[i], i);
+//         tempInternalArray.push(returnCallbackValue);
+//     }
+//     return tempInternalArray;
+// }
+// console.log(reply2);
+
+
+/* 
+    Math.ceil 
+    Math.floor
+    Math.round 
+    Math.abs -> absolute -> 
+    Math.random -> 0 to 1 (NI)
+    Math.sqrt()
+    Math.pow
+*/
+// console.log(Math.ceil(3.2));
+// console.log(Math.ceil(3.002));//
+// console.log(Math.floor(3.002));
+// console.log(Math.floor(3.999999));//
+
+// console.log(Math.abs(-40));
+// console.log(Math.abs(40));//
+
+// console.log(Math.random());
+
+/* 
+    1) It generates a value between 0 to 1(non inclusive) ->
+    0 to 0.9999999999........
+
+    we need a random integer number between a certain range 
+
+    min = 10, max 90 -> 
+
+    0 - 1
+    10 - 90
+
+    Math.random(max)*90 ->
+
+    0*90 => 0 
+    1*90 => 90
+
+*/
+// console.log(Math.floor((Math.random()*(90-10)) + 10 + 1));
+
+// const max = 90;
+// const min = 10;
+// Math.floor((Math.random()* (max-min)) + min + 1);//
+
+// console.log(Math.sqrt(7));
+// console.log(Math.pow(3, 2));
+
+/* 
+    Objects -> 
+
+    a for loop that we covered in array -> ????
+
+*/
+
+// const obj = {name: 'naman', age: 10};
+// for(let a of obj){
+//     console.log(a);
+// }
+// for in
+
+
+
+
+
+
+
+
+// Dynamic Objects ? 
+
+/* 
+    Requirement is 
+
+    const a = 'name'
+    const value = 'naman';
+
+    const obj = {};
+
+    Answer: if I print obj
+
+    {name: 'naman'}
+
+    Restriction is -> you need to utilise the variables
+    a, value should be utilised ->
+*/
+
+// const a = 'name';
+// const value = 'naman';
+// const obj = {};
+//{name: 'naman'}
+// obj.a = value;
+// console.log(obj);
+
+// obj[a] = value;
+// console.log(obj);
+
+
+// Trial Example ->
+// let obj2 = {name: 'naman', age: 10};
+// obj2.gender = 'male';
+// console.log(obj2);
+
+// obj2['add'] = 'delhi';
+// console.log(obj2);
+
+// obj2[add] = 'delhi';
+// console.log(obj2);
+
+
+// function testFunc(key, value, obj){
+//     obj[key] = value;
+//     return obj;
+// }
+// const obj = testFunc('name', 'naman', {});
+// console.log(obj);
+
+
+// let obj = {name: 'naman', age: 10};
+
+// for(let a in obj){
+//     // console.log(obj['name']);
+//     // console.log(obj['age']);
+
+//     // console.log(obj[a]);
+//     // console.log(a);
+
+//     // console.log(obj.a);
+//     console.log(obj[a]);
+
+
+//     console.log(obj.name); //
+//     console.log(a);
+// }
+
+
+/* arrays are kind of part of object in JS */
+
+/* 
+    the indexes in arrays act as the keys for the
+    value they are holding
+*/
+
+// for(let a in [2,4,6,8]){
+//     console.log(a);
+// }
+
+// const obj = {name: 'naman', age: 10}
+// for(let a of Object.keys(obj)){
+//     console.log(a);
+//     console.log(obj[a]);
+// }
+
+/* 
+    Object.keys()
+    Object.values()
+    Object.entries()
+
+*/
+
+// console.log(Object.keys(obj)); //all keys in array format
+// console.log(Object.values(obj)); //all val in array format
+// console.log(Object.entries(obj)); //key value pair in array format
+
+/* 
+    For of -> is for array
+    for in -> is for objects
+
+    indirectly you can utilise for of for objects by doing Object.keys(obj)
+
+    indirectly you can utilise for in for arrays by using array in it
+
+*/
+
+/* 
+    Destructing in objects ->
+
+*/
+// const arr = ['naman', 10];
+// const [a, b] = arr;
+
+// console.log(a, b);
+
+// const obj = {name: 'naman', age: 10};
+// const obj2 = {age: 10, name: 'naman'};
+
+// /* 
+//     the above two carrry the same values -> 
+// */
+// console.log(obj.name);
+// console.log(obj2.name);
+
+// const obj2 = {age: 10, name: 'naman'};
+
+// const {ag, nm} = {age: 10, name: 'naman'};
+// console.log(ag);
+// console.log(nm);
+
+// const {age, name, address} = {age: 10, name: 'naman'};
+// console.log(age);
+// console.log(name);
+// console.log(address);//undefined
+/* 
+    destructing in objects happen with respect to the key name present in the object
+
+*/
+
+
+// const {age} = {age: 10, name: 'naman'};
+// console.log(age);
+
+
+/* 
+    Destructing doesnt get effected if we have more or less values
+    if we have more values -> the more values will get an undefiend
+    if we have less values, the only values that are getting destructed will be
+    copied
+*/
+// const random = 10;
+
+// function sample(){
+//     return {random: Math.random()}
+// }
+
+// const {ran} = sample();
+
+// // const {ran} = {random: Math.random()};
+
+// console.log(ran); //
+
+// const random = 10;
+
+// function sample(){
+//     return {random: Math.random()}
+// }
+
+// const {random: newVariable} = sample();
+
+// console.log(random);
+// console.log(newVariable);
+
+// const arr  = [1,2,3,4,5]
+// console.log(arr.includes(19)); //boolean
+
+// const strArr = ['naman', 'mahesh', 'kajal', 'harsha'];
+// console.log(strArr.includes('maheshs'));
+
+
+// const [a,b] = [2,10];
+// /* 
+//     index mapping ->
+
+// */
+
+// const {age: my_own_variable, name} = {age: 10, name: 'naman'};
+
+// //dynamic objects ->
+// /* 
+//     whenever we are dealing with variables as key then we have to use 
+//     [<variable>]
+// */
+
+// var key = 'name';
+// var value = 'naman';
+// const obj ={}; //{name: 'naman'}
+// /* 
+//     . , ['']
+// */
+// obj[key] = value;
+// console.log(obj);
+
+// /* 
+//     I want to ahve a expression which generates integer based number
+//     from 20 to 70
+// */
+
+// Math.random() //0 to 0.9999999999999 -> 0 and 1 not inclusive 
+// /* 
+//     min -> 20 
+//     max -> 70
+
+//     step 1 -> handle max -> not matter even if they are in float -> 0 to 70 (NI)
+
+// */
+
+// Math.random() * 70 // 0 to 70 (not inclusive)
+
+// /* 
+//     step 2 -> making the number start from minimum // I add the minimum
+// */
+// (Math.random()) * (70-20) + 20 // 1  * (70-20) = 50 + 20 -> 70 minimum 
+
+// /* 
+//     step 3 -> handle float -> 
+// */
+
+// Math.floor((Math.random()) * (70-20 + 1) + 20) //20. -> 20 & 69..99999 -> 69
+
+
+// const arr = [['name', 'naman'], ['age', 10], ['add', 'delhi']];
+
+// const makeArrObj = (arr) => {
+//     //write your code
+//     const obj =  {};
+//     for(let keyValArr of arr){
+//         obj[keyValArr[0]] = keyValArr[1];
+//     }
+
+//     return obj;
+// }
+
+// const newObj = makeArrObj(arr)
+// console.log(newObj);
+// /* 
+//     Expected output: {'name': 'naman', 'age': 10, 'add': 'delhi'}
+// */
+
+
+// const arr = [['name', 'naman'], ['age', 10], ['add', 'delhi']];
+
+// const makeArrObj = (arr) => {
+//     //write your code
+//     const obj =  {};
+//     for(let [key, val] of arr){
+//         // obj[keyValArr[0]] = keyValArr[1];
+//         obj[key] = val;
+//     }
+
+//     return obj;
+// }
+
+// const newObj = makeArrObj(arr)
+// console.log(newObj);
+
+// const arr = [['name', 'naman'], ['age', 10], ['add', 'delhi']];
+
+// const makeArrObj = (arr) => {
+//     //write your code
+//     // const obj =  {};
+//     const obj = arr.reduce((prev, curr)=>{
+//         const [key, val] = curr;
+//         prev[key] = val;
+//         return prev;
+//     }, {});
+//     return obj;
+// }
+
+// const newObj = makeArrObj(arr)
+// console.log(newObj);
+
+/* 
+    ... spread with objects -> 
+*/
+
+// const obj = {
+//     name: 'naman',
+//     age: 10
+// }
+// const obj3 = {
+//     add: 'delhi',
+//     name: 'Dinesh'
+// }
+
+// // const obj2 = {...obj, ...obj3};
+// const obj2 = {...obj3, ...obj};
+// console.log(obj2);
+// const name1 = 'nj'
+// const age = 20;
+// const add = 'up'
+// const obj = {
+//     name1: 'naman',
+//     age: 10
+// }
+// const obj3 = {
+//     add: 'delhi',
+//     name1: 'Dinesh'
+// }
+
+// // const obj2 = {...obj, ...obj3};
+// const {name1 : nm1, age: ag1, add: ad1} = {...obj3, ...obj};
+// // console.log(obj2);
+
+// console.log(name1);
+// console.log(age);
+// console.log(add);
+// console.log(nm1);
+// console.log(ag1);
+// console.log(ad1);
+
+// const something = [2,4,6,8].toString();
+// console.log(something); //arr.join(',')
+
+// // [2,4,6,8].join();
+// // {name: 'naman'}.join('')
+// const obj = {};
+
+// console.log(obj.toString()); 
+// // console.log(obj.join(''));
+
+/* 
+    sorting ->
+    comparator?
+
+    .sort() -> soritng in arrays
+*/
+
+// const nameArr = ['naman', 'harsha', 'dinesh', 'deepak', 'neha'];
+
+// nameArr.sort();
+// console.log(nameArr);
+
+// const numbArr = [100, 20, 500, 200, 400, 5];
+// numbArr.sort();
+// console.log(numbArr);
+
+/* 
+    comparator function -> 
+
+    we pass a callback inside the sort
+
+
+*/
+
+
+const numbArr = [100, 20, 500, 200, 400, 5];
+const cb = (a,b) => {
+    console.log(a);
+    console.log(b);
+    return b-a;
+}
+numbArr.sort(cb);
+console.log(numbArr);
+
+// const arrObj = [
+//     {name: 'naman', age: 10},
+//     {name: 'n1', age: 20},
+//     {name: 'n3', age: 5},
+//     {name: 'n4', age: 15},
+// ]
+// /* 
+
+// */
+// const cb = (a, b) =>{
+//     return a.age - b.age
+// }
+
+// arrObj.sort(cb);
+// console.log(arrObj);
