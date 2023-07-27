@@ -2755,9 +2755,9 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 
 // const newObj = makeArrObj(arr)
 // console.log(newObj);
-// /* 
-//     Expected output: {'name': 'naman', 'age': 10, 'add': 'delhi'}
-// */
+/* 
+    Expected output: {'name': 'naman', 'age': 10, 'add': 'delhi'}
+*/
 
 
 // const arr = [['name', 'naman'], ['age', 10], ['add', 'delhi']];
@@ -2866,14 +2866,14 @@ we cannot have 2 same variable if one of them is let or const declaration in sam
 */
 
 
-const numbArr = [100, 20, 500, 200, 400, 5];
-const cb = (a,b) => {
-    console.log(a);
-    console.log(b);
-    return b-a;
-}
-numbArr.sort(cb);
-console.log(numbArr);
+// const numbArr = [100, 20, 500, 200, 400, 5];
+// const cb = (a,b) => {
+//     console.log(a); //
+//     console.log(b); //
+//     return b-a;
+// }
+// numbArr.sort(cb);
+// console.log(numbArr);
 
 // const arrObj = [
 //     {name: 'naman', age: 10},
@@ -2890,3 +2890,104 @@ console.log(numbArr);
 
 // arrObj.sort(cb);
 // console.log(arrObj);
+
+
+// const numbArr = [100, 20, 500, 200, 400, 5];
+// const ascending = (a,b) => {
+//     console.log(a);
+//     console.log(b);
+//     return a-b;
+// }
+// const descending = (a,b) => {
+//     console.log(a);
+//     console.log(b);
+//     return b-a;
+// }
+// numbArr.sort(descending);
+// console.log(numbArr);
+
+// function hof(){
+//     const a = 20;
+//     //random => undefined -> why? hositing
+
+//     return random(); //error
+
+    
+
+//     var random = () => {
+//         return 'I am a variable'
+//     }
+//     function random(){
+//         return 'I am a function';
+//     }
+//     var random = '10';
+//     var random = 200;
+
+// }
+// const answer = hof();
+// console.log(answer);
+// function abcd(){
+// return 10;
+// console.log('some')
+// console.log('some')
+// console.log('some')
+// console.log('some')
+// console.log('some')
+// }
+
+
+// function hof(){
+//     const a = 20;
+    
+//     var random = () => {
+//         return 'I am a variable'
+//     }
+//     return random(); 
+//     function random(){
+//         return 'I am a function';
+//     }
+    
+// }
+// const answer = hof();
+// console.log(answer); //output?
+
+// function hof(){
+//     const a = 20;
+    
+//     var random = 10;
+//     return random(); 
+//     function random(){
+//         return 'I am a function';
+//     }
+    
+// }
+// const answer = hof();
+// console.log(answer); //output?
+
+// function hof(){
+//     const a = 20;
+//     return random(); 
+//     function random(){
+//         return 5;
+//     }
+//     function random(){
+//         return 10;
+//     }
+    
+// }
+// const answer = hof();
+// console.log(answer); //output?
+// function hof(){
+//     const a = 20;
+//     let random = 10;
+//     return random(); 
+//     function random(){
+//         return 5;
+//     }
+//     // {
+
+//     // }
+    
+// }
+// const answer = hof();
+// console.log(answer); //output?
