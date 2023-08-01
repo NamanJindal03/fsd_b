@@ -4,6 +4,10 @@
     <!-- <script src="./sample2.js" ></script>    -->
     <!-- <script src="./sample.js" ></script>    -->
     <style>
+        body{
+            background-color: black;
+            color: white;
+        }
         #randomH1{
             color: green;
         }
@@ -16,10 +20,22 @@
             background-color: blue;
         }
 
+        #bigBox{
+            height: 500px;
+            width: 500px;
+            border: 1px solid white;
+
+        }
+        #bigBox > * {
+            border: 1px solid red;
+        }   
+        h1[name="h11"]{
+            color:green
+        }
+
     </style>
 
     <link rel="stylesheet" href="./index.css">
-    <script src="./testBrowser.js" async></script>
 
 </head>
 <body>
@@ -30,27 +46,123 @@
     <h1 id="randomH1" class="c1">this is my another h1</h1>
 
     <p>Lorem ipsum dolor sit amet.</p> -->
-        <p>Lorem, ipsum.</p>
+        
+    
+    
+    <!-- <p id="pId">Lorem, ipsum.</p>
         <p>Lorem, ipsum.</p>
         <p>Lorem, ipsum.</p>
         <p>Lorem, ipsum.</p>
 
         <div title="divdiv" id="demoId">
             this is div text
-            <!-- <p>this is my p</p> -->
         </div>
-        <div title="divdiv" id="demoId1" class="classToBeAdded">
+        <div title="divdiv" id="demoId1" class="classToBeAdded" onclick="clickTest()">
             this is div text2323
-            <!-- <p>this is my p</p> -->
         </div>
-        <div title="divdiv" id="demoId2" class="classToBeAdded">
+        <div title="divdiv" id="demoId2" class="classToBeAdded" ondblclick="testDbl()">
             this is div text2
-            <!-- <p>this is my p</p> -->
         </div>
-        <div title="divdiv" id="demoId3">
-            this is div text213123123
-            <!-- <p>this is my p</p> -->
+        <div title="divdiv" id="demoId3" style="border: 1px solid red">
+            this is div text213123123 - this is the one
         </div>
+
+        <button>random1</button>
+        <button>random1</button>
+        <input type="text" id="input1"> -->
+    <!-- <span id="counter">
+        10
+    </span>
+    <span id="countStop">
+        200
+    </span>
+    <div id="textNode"></div> -->
+
+    <!-- linked an external script -->
+
+
+    <!-- <div id="bigBox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div> -->
+<!-- 
+    <input type="number" id="numbInput1">
+    <input type="number" id="numbInput2">
+
+    <button id="sumBtn">Sum</button> -->
+
+
+
+    <!-- <h1 title="h11" id="newH1"> 
+        this is my h1
+    </h1> -->
+
+    <!-- <div id="randomId">
+        <div id="r1">
+            div1
+        </div>
+        <div id="r2">
+            div2
+        </div>
+    </div> -->
+
+    <!-- <input type="checkbox" name="checkboxes" checked>
+    <input type="checkbox" name="checkboxes1" >
+    <input type="checkbox" name="checkboxes2" checked>
+    <input type="checkbox" name="checkboxes3" checked> -->
+    <!-- <input type="checkbox" name="checkboxes2" checked> -->
+    <!-- <input type="text">
+
+    <input type="radio" name="rad1" value="red"> red
+    <input type="radio" name="rad1" value="green"> green
+    <input type="radio" name="rad1" value="blue">blue
+    <input type="radio" name="rad1" value="orange">orange
+    <input type="radio" name="rad1" value="pink">pink
+
+    <input type="checkbox" value="science">science
+    <input type="checkbox" value="history">history
+    <input type="checkbox" value="mathematics">mathematics
+
+
+    <button id="sampleBtn">btn</button>
+
+    <div id="displayValues">
+        <div id="textDisplay"></div>
+        <div id="radioOutput"></div>
+        <div id="checkboxesOutput"></div>
+    </div> -->
+    <form >
+        <input type="text" name="inputKey">
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="div1">
+        Lorem ipsum dolor sit amet.
+    </div>
+
+    <a href="https://www.google.com">google</a>
+
+
+    <script src="./testBrowser.js" ></script>
+
+    <!-- <script>
+        console.log('now I am on the same html page')
+    
+
+    
+// const input1Tag = document.getElementById('input1');
+// input1Tag.addEventListener('change', ()=>{
+//     console.log('i changed');
+// })
+// input1Tag.addEventListener('focus', ()=>{
+//     console.log('now i am focusing on the input');
+// })
+// input1Tag.addEventListener('blur', ()=>{
+//     console.log('now i am blurring on the input');
+// })
+</script> -->
 
 
 </body>
