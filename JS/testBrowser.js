@@ -510,19 +510,19 @@
 
 
 
-const divTag = document.querySelector('#div1');
-console.log(divTag);
+// const divTag = document.querySelector('#div1');
+// console.log(divTag);
 // divTag.addEventListener('click', (event)=>{
 //     console.log(event.target.innerText); //
 //     event.preventDefault();
 //     //preventDefault()
 // })
 
-const form = document.querySelector('form')
-form.addEventListener('submit', (event)=>{
-    event.preventDefault();
-    console.log('my own event 2')
-})
+// const form = document.querySelector('form')
+// form.addEventListener('submit', (event)=>{
+//     event.preventDefault();
+//     console.log('my own event 2')
+// })
 // form.addEventListener('submit', ()=>{
 //     console.log('my own event')
 // })
@@ -530,8 +530,94 @@ form.addEventListener('submit', (event)=>{
 //     alert('abcd');
 // })
 
-document.querySelector('a')
-        .addEventListener('click', (e)=>{
-            e.preventDefault();
-            console.log('some log')
-        })
+// document.querySelector('a')
+//         .addEventListener('click', (e)=>{
+//             e.preventDefault();
+//             console.log('some log')
+//         })
+
+/* 
+const form1 = document.querySelector('form')
+
+form1.addEventListener('submit', (event) => {
+
+event.preventDefault();
+
+const name1 = document.getElementById('name');
+
+const age1 = document.getElementById('age');
+
+//object ->
+
+const arr = [];
+
+arr.push(name1.value);
+
+arr.push(age1.value);
+
+console.log(arr);
+
+})
+
+*/
+
+// const form = document.querySelector('form');
+
+// const obj = {};
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const nameValue = document.querySelector('#name').value
+//     const ageValue = document.querySelector('#age').value
+//     obj.name = nameValue;
+//     obj.age = ageValue;
+
+//     console.log(obj);
+
+//     const displayAreaTag = document.querySelector('#displayArea');
+//     // displayAreaTag.textContent = JSON.stringify(obj);
+//     displayAreaTag.textContent = (function(){
+//         return `${obj.name} ${obj.age}` 
+//     })()
+// })
+
+
+// document.querySelector('#sub')
+//         .addEventListener('click', ()=>{
+//             form.submit()
+//         })
+
+
+const gpTag = document.querySelector('#grandParent');
+const pTag = document.querySelector('#parent');
+const cTag = document.querySelector('#child');
+let count = 0;
+gpTag.addEventListener('click', (e)=>{
+    
+    e.stopPropagation();
+
+    console.log('grand parent triggered');
+}, false)
+
+pTag.addEventListener('click', (e)=>{
+    
+    e.stopPropagation();
+
+    console.log('parent triggered');
+}, false)
+
+cTag.addEventListener('click', (e)=>{
+    console.log(e)
+    count++;
+    if(count > 1){
+        e.stopPropagation();
+    }
+    console.log('child triggered');
+},false)
+
+
+
+
+// function customAddEventListener (eventName, cb, isCapturing= false) {
+
+// }
