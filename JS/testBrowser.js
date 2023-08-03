@@ -588,32 +588,32 @@ console.log(arr);
 //         })
 
 
-const gpTag = document.querySelector('#grandParent');
-const pTag = document.querySelector('#parent');
-const cTag = document.querySelector('#child');
-let count = 0;
-gpTag.addEventListener('click', (e)=>{
+// const gpTag = document.querySelector('#grandParent');
+// const pTag = document.querySelector('#parent');
+// const cTag = document.querySelector('#child');
+// let count = 0;
+// gpTag.addEventListener('click', (e)=>{
     
-    e.stopPropagation();
+//     e.stopPropagation();
 
-    console.log('grand parent triggered');
-}, false)
+//     console.log('grand parent triggered');
+// }, false)
 
-pTag.addEventListener('click', (e)=>{
+// pTag.addEventListener('click', (e)=>{
     
-    e.stopPropagation();
+//     e.stopPropagation();
 
-    console.log('parent triggered');
-}, false)
+//     console.log('parent triggered');
+// }, false)
 
-cTag.addEventListener('click', (e)=>{
-    console.log(e)
-    count++;
-    if(count > 1){
-        e.stopPropagation();
-    }
-    console.log('child triggered');
-},false)
+// cTag.addEventListener('click', (e)=>{
+//     console.log(e)
+//     count++;
+//     if(count > 1){
+//         e.stopPropagation();
+//     }
+//     console.log('child triggered');
+// },false)
 
 
 
@@ -621,3 +621,85 @@ cTag.addEventListener('click', (e)=>{
 // function customAddEventListener (eventName, cb, isCapturing= false) {
 
 // }
+
+
+/* 
+    Evenet bubbling
+    event capturing 
+
+    event delegation ->
+
+*/
+
+// document.querySelector('#scissor')
+//         .addEventListener('click', (e)=>{
+//             console.log(e.target.innerText)
+//         })
+
+// document.querySelector('#paper')
+//         .addEventListener('click', (e)=>{
+//             console.log(e.target.innerText)
+//         })
+
+// document.querySelector('#pencil')
+//         .addEventListener('click', (e)=>{
+//             console.log(e.target.innerText)
+//         })
+// const arr = [];
+// document.querySelector('#shoppingList')
+//         .addEventListener('click', (e)=>{
+//             // console.log(e.target.innerText)
+//             // arr.push(e.target.innerText)
+//             // console.log(arr)
+//             // if(e.target.tagName === )
+//             console.log(e.target.tagName );
+//             if(e.target.tagName === 'LI'){
+//                 console.log(window.location.origin)
+//                 window.location.href = window.location.origin + "/" + e.target.id
+//             }
+            
+//         })
+
+//         document.querySelector('#shoppingList')
+
+// .addEventListener('click', (e) => {
+
+// console.log(e.target.innerText)
+
+// let data = e.target.innerText;
+
+// location.href= "http://127.0.0.1:5501/demo.html"+data;
+
+// })
+// const empltySpace = document.querySelector('#displayText')
+
+
+
+
+
+// document.querySelector('#form')
+//         .addEventListener('keyup', (e)=>{
+//             console.log('keyup'+e.target.value)
+//         })
+// document.querySelector('#form')
+//         .addEventListener('keydown', (e)=>{
+//             console.log('keydown', e.target.value)
+//         })
+
+
+
+// document.querySelector('#form')
+//         .addEventListener('click', (e)=>{
+//             console.log('click');
+//         })
+
+// document.querySelector('#form')
+//         .addEventListener('click', (e)=>{
+//             e.stopImmediatePropagation();
+//             console.log('click2')
+//         })
+
+// document.querySelector('#form')
+//         .addEventListener('click', (e)=>{
+//             console.log('click3')
+//         })
