@@ -27,3 +27,25 @@ document.querySelector('#addTask').addEventListener('click', ()=>{
     
     inputBox.value = '';
 })
+
+localStorage.setItem('name', 'naman');
+localStorage.setItem('age', '10');
+
+localStorage.setItem('name', 'new valuie')
+
+const newName = localStorage.getItem('name');
+console.log(newName);
+
+localStorage.removeItem('name');
+
+localStorage.setItem('user', JSON.stringify({
+    'name': 'naman',
+    'age': 10
+}))
+
+console.log(JSON.parse(localStorage.getItem('user')));
+
+
+sessionStorage.setItem('name', 'Manju');
+sessionStorage.getItem('name');
+// sessionStorage.removeItem()
