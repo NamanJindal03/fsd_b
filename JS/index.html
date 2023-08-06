@@ -4,9 +4,9 @@
     <!-- <script src="./sample2.js" ></script>    -->
     <!-- <script src="./sample.js" ></script>    -->
     <style>
-        *{
+        /* *{
             outline: 1px solid red;
-        }
+        } */
         body{
             background-color: black;
             color: white;
@@ -54,6 +54,7 @@
     </style>
 
     <link rel="stylesheet" href="./index.css">
+    <script src="./testBrowser.js" defer></script>
 
 </head>
 <body>
@@ -223,6 +224,33 @@
 // })
 </script> -->
 
+<div id="mainDiv">
+    <span class="span1">SPan tag content</span>
+    <span class="span1">SPan tag content</span>
+    <div>
+        I am not supposed to be removed
+    </div>
+    <span class="span1">SPan tag content</span>
+    <span class="span1">SPan tag content</span>
+    <div>
+        Critical ----
+    </div>
+    <span class="span1">SPan tag content</span>
+</div>
+
+<button id="btn">
+    Do some action
+</button>
+
+<button id="btn2">
+    Add Things
+</button>
+
+<button id="btn3">
+    Remove attributes in span
+</button>
+
+    
 
 </body>
 </html>

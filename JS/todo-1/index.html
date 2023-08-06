@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userInput{
+            display: flex;
+            justify-content: center;
+        }
+        #displayTasks{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #displayTasks > * {
+            margin: 5px 0px;
+        }
+        .markImportant {
+            background-color: yellow;
+        }
+    </style>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="userInput">
+            <input type="text" name="task" id="task">
+            <button id="addTask">Add Task</button>
+        </div>
+        <section id="displayTasks">
+            <h1>Tasks</h1>
+            
+        </section>
+    </main>
+    
+</body>
+</html>

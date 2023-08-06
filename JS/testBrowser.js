@@ -703,3 +703,74 @@ console.log(arr);
 //         .addEventListener('click', (e)=>{
 //             console.log('click3')
 //         })
+
+
+// const btn = document.querySelector('#btn').addEventListener('click', ()=>{
+//     const tempPTag = document.createElement('p');
+//     tempPTag.innerText = 'this text was created from the JS';
+//     console.log(tempPTag);
+
+//     const test = document.createElement('div');
+//     test.innerText = 'div text';
+
+//     const test2 = document.createElement('section');
+//     test.innerText = 'div text';
+//     // const tempATag = document.createElement('a');
+//     // const tempdivTag = document.createElement('div');
+//     // console.log(tempPTag);
+    
+//     const baseBody = document.body;
+//     console.log(baseBody);
+//     // baseBody.append('abcd');
+
+//     baseBody.prepend(tempPTag)
+
+//     // baseBody.appendChild('abcd');
+// })
+/* ADD things on to the dom through JS */
+
+/* How can we remove the elements */
+const btn1 = document.querySelector('#btn');
+const btn2 = document.querySelector('#btn2');
+const btn3 = document.querySelector('#btn3');
+const mainDivTag = document.querySelector('#mainDiv');
+
+btn1.addEventListener('click', () => {
+    //TODO: remove individual spans
+    // const span1Tag = document.querySelector('#span1');
+    // span1Tag.remove();
+
+    //TODO: remove whole content from the div
+    // mainDivTag.innerHTML = '';
+
+
+    //TODO: remove just span from the div
+    const allSpanTags = document.querySelectorAll('#mainDiv .span1')
+    for(let span of allSpanTags){
+        span.remove();
+    }
+})
+
+btn2.addEventListener('click', ()=>{
+    const nd = document.createElement('span');
+    nd.textContent = 'random addition';
+    nd.classList.add('span1');
+
+    //how we can add other attributes as well ->
+    nd.setAttribute('title', 'nre title');
+    nd.setAttribute('id', 'notTheCOrrectWay');
+
+    // nd.removeAttribute('id');
+
+    mainDivTag.append(nd);
+})
+
+
+btn3.addEventListener('click', ()=>{
+    const allSpanTags = document.querySelectorAll('#mainDiv .span1');
+    for(let span of allSpanTags){
+        // if()
+        span.removeAttribute('id');
+    }
+
+})
