@@ -2,9 +2,10 @@ const inputBox = document.querySelector('#task');
 const displayTasksTag = document.querySelector('#displayTasks');
 
 const initialTodoList = JSON.parse(localStorage.getItem('todoList')) || [];
-for(let task of initialTodoList){
-    addTaskInDom(task.name);
-}
+console.log(initialTodoList);
+// for(let task of initialTodoList){
+//     addTaskInDom(task.name);
+// }
 
 function addTodoInLocalStorage(newTask){
     const localStorageTodoList = JSON.parse(localStorage.getItem('todoList')) || [];
