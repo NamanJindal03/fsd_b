@@ -1512,3 +1512,129 @@ Next Leccture ->
 JS again -> THIS keyword ->
 
 
+
+whenever we are adding a certain task -> that should also be appended
+in my localstorage -> push() object after creating the object-> in the existing key;
+
+when the user clicks  on delete button -> we need to update the existing localstorage where we delte that particular todo.
+
+get the todos from the localstorage and make html elements for that.
+
+
+Homework -> 
+Thursday -> 
+
+TOAST Generator ->  HTML , CSS and JS -> 
+positions -> 
+flexbox -> 
+JS -> todo -> toast -> 
+
+
+Toast -> 
+1) HTML CSS -> Toast Customization
+2) HTML CSS -> Toast Message -> demo -> 
+(later on this will be done in js)
+but as you need proper classes etc thats why you will make a 
+demo in html css
+positions -> absolute -> right -> 10px, top -> 10px
+flexbox -> toastMessageContaienr -> 
+flexp-column -> column -> gap -> 
+
+.prepend ->
+append -> 
+
+creatign a toast -> creating a todo ->
+delete  button -> todo -> cross on toast -> 
+
+all of the toast customization	
+	1)green/ red 
+
+3) Select all the values given in the toast customization
+4) attahc event lsitener on add buttton -> toast message 
+
+5) isCancelled and success and error -> conditional css  
+
+6) handling the duration -> setTimeout -> 
+
+7) Clear all toast -> 
+
+Base Code ->
+
+Bonuses ->
+
+1) Error Handling -> user didnt put a certain value -> 
+show alert -> you need this this this 
+
+2) By having defualts set in the js ->
+
+Js -> success -> 
+DUration -> 3000 ms
+
+3) Setting defaults at client level -> form -> 
+because -> user can remove those values -> 
+
+
+THIS -> 
+Default function -> function () -> 1st Category ->
+4 kinds of sitautions -> 
+
+Very Important ->
+the value of this in default functions is not dependent where the this is present, it is dependent on how we are calling the function -> 
+
+
+Default Binding -> done
+Implicit  -> done
+
+Next Lecture ->
+	Explicit -> call, bind and apply -> 
+
+	bind -> it does not call the function, it returns a reference in which our provided this is binded with that function. 
+
+	new keyword 
+
+Arrow Function -> 2nd category ->
+
+JS doesnt have any concept of classes internally ->
+There is a keyword class present in JS but that is just sugarcoat
+internally we have something called as a constructor function ->
+
+constructor function is just a special form of a function
+how special? 
+Constructor functions are invoked with new keyword
+
+New Keywords -> Roles and Responsibilites -> 
+
+/*  
+    1) it creates a empty object -> {}
+    2) it points the value of this to the empty object it created 
+    this = {}
+    3) if we are not returning anything from the constructor function or if we are not returning a object it automatically returns this keyword.
+    4) 
+*/ 
+
+questions based on functional this 
+concept on arrow functions -> this 
+
+
+the value of this in default functions is not dependent where the this is present, it is dependent on how we are calling the function ->
+
+arrow function are totally opposite of it -> 
+the value of this in arrow functions is depenednt on where the arrow functions are present. It does not matter how we are calling it.  
+
+
+arrow func vs normal functions ->
+arrow functions do not have a binding with this -> they do not contain any this value of themselves 
+
+normal functiosn -> they have their own this value which is detemmined by how we are calling the funciton
+
+closure -> 
+what is closure or its application-> 99% 
+
+
+Toast project discussion -> 
+
+
+
+
+
+
