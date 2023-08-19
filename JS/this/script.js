@@ -474,3 +474,129 @@
 // }
 // abcd.call(obj2);
 
+// let user = {
+//     firstName: 'naman',
+//     lastName: 'jindal',
+//     age: 10,
+//     courseList: [],
+//     buyCourse: function(courseName) {
+//         this.courseList.push(courseName)
+//     },
+//     getCourse: function(){
+//         console.log(this.courseList);
+//     }
+// }
+// user.buyCourse('node');
+// user.getCourse();
+
+// const User = (name) => {
+//     this.name = name
+// }
+// const user1 = new User();
+// console.log(user1.name);
+
+// const User = (name) => {
+//     this.name = name
+//     //not returning anythign
+//     //undefined -> 
+//     return {}
+// }
+// const user1 = User('naman'); //new ?
+// console.log(user1.name); //error
+
+// function sample(name){
+//     return function inner(){
+//         console.log(name);
+//     }
+// }
+// const s1 = sample('abcd');
+// const s2 = sample('defg');
+// s1();
+// s2();
+
+
+// function outer(){
+//     let i = 10;
+//     function inner(){
+//         console.log(i);
+//     }
+//     return inner;
+// }
+// const innerFunc = outer();
+// innerFunc();
+
+// function outer(name){
+//     let i = 10;
+//     function inner(random){
+//         console.log(i);
+//         console.log(name);
+//         console.log(random);
+//     }
+//     return inner;
+// }
+// const innerFunc = outer('naman');
+// innerFunc('naman2');
+
+// function outer2(){
+//     let j = 100;
+//     function outer(name){
+//         console.log(j);
+//         let i = 10;
+//         function inner(random){
+//             console.log(i);
+//             console.log(name);
+//             console.log(random);
+//         }
+//         return inner;
+//     }
+//     return outer;
+// }
+// const outerFunc = outer2();
+// const innerFunc = outerFunc('naman');
+// innerFunc('naman2');
+
+
+// function outer(name){
+//     let i = 10;
+//     function inner(){
+//         console.log(i);
+//         console.log(name);
+//         ++i;
+//     }
+//     return inner;
+// }
+// const innerFuncNaman = outer('naman');
+// const innerFuncHarsha = outer('Harsha');
+// innerFuncNaman();
+// innerFuncHarsha();
+
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncNaman();
+// innerFuncHarsha();
+
+/* 
+    When functions are returned they remember where they were present -> Closures 
+*/
+
+
+// function x(){
+//     var a = 10;
+//     function random(){
+//         console.log(a); //
+//     }
+//     a = 200;
+//     return random;
+// }
+// const randomInstance = x();
+// randomInstance();
+
+
+///millions of lines of code
+
+
+// randomInstance(); // this will still retain its closure -> infinite time -> 
