@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+.block {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+#paintBuckets{
+    width: 225px;
+    display: flex;
+    flex-wrap: wrap;
+}

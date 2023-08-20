@@ -596,7 +596,188 @@
 // randomInstance();
 
 
-///millions of lines of code
+// // /millions of lines of code
 
 
 // randomInstance(); // this will still retain its closure -> infinite time -> 
+
+// function createElement(){
+//     let count = 0;
+//     // let message ;
+//     function increment(){
+//         count++;
+//         console.log(count);
+//         // message = `Count is ${count}`;
+//     }
+//     let message = `Count is ${count}`;
+//     function log(){
+//         message = `Count is ${count}`;
+//         console.log(message);
+//     }
+//     return [increment, log];
+// }
+// const [increment, log] = createElement();
+// increment();
+// increment();
+// increment();
+// log();
+
+// const [inc, l] = createElement();
+// inc();
+// inc();
+// inc();
+// l();
+
+
+
+// function createElement(){
+//     let count = 0;
+//     // let message ;
+//     function increment(){
+//         count++;
+//         console.log(count);
+//     }
+//     let message = `Count is ${count}`;
+
+//     function log(){
+//         count++;
+//         console.log(message);
+//     }
+//     return [increment, log];
+// }
+// const [increment, log] = createElement();
+// // increment();
+// // increment();
+// // increment();
+// log();
+// log();
+// log();
+
+//stack -> 
+
+// function createStack(){
+//     const stackItems = [];
+//     return{
+//         // stackItems: [],
+//         push(item){
+//             stackItems.push(item);
+//         },
+//         pop(){
+//             return stackItems.pop();
+//         },
+//         peek(){
+//             return stackItems[stackItems.length-1]
+//         },
+//         size(){
+//             return stackItems.length;
+//         },
+//         returnStack(){
+//             const tempStack = [...stackItems];
+//             return tempStack;
+//         },
+//         showStack(){
+//             let items = ''
+//             for(let item of stackItems){
+//                 items += `${item} `
+//             }
+//             console.log(items);
+//             // return stackItems
+//         }
+
+//     }
+// }
+// const stack = createStack();
+// console.log(stack);
+// // console.log(stack.stackItems[2]);
+// stack.push(100);
+// stack.push(200);
+// stack.pop();
+// stack.push(500);
+// console.log(stack.size());
+// console.log(stack.peek());
+// const newStoree = stack.returnStack();
+// newStoree.push(10);
+// // const IGotYou = stack.showStack();
+// // IGotYou.push(10);
+// stack.showStack()
+
+// function counter(){
+//     //complete this function
+//     let count = 0;
+//     return {
+//         increment: function(){
+//             count++;
+//             console.log(count)
+//         }
+//     }
+// }
+
+// let counter1 = counter();
+// counter1.increment(); // should print 1
+// counter1.increment(); //should print 2 
+
+// counter1.count = 200;
+// counter1.increment();//should print 3
+// // console.log(counter1.count);
+
+// let counter2 = counter();
+// counter2.increment(); ///
+
+// function multiply(a){
+//     //complete this function defination -> such that the below statemetns give me the expected result
+
+//     if(a!== undefined && b!== undefined){
+//         console.log(a*b);
+//         return;
+//     }
+
+//     if(b === undefined){
+//         return function(num){
+//             console.log(a*num)
+//         }
+//     }
+// }
+
+// multiply(4,5); //20
+// multiply(10,2); //20
+
+// multiply(3)(9); //
+// multiply(3)(7); //
+
+// // const multiplyThree = multiply(3);
+// // console.log(multiplyThree);
+// // multiplyThree(9); //27
+// // multiplyThree(7); //21
+
+// add(10)(20)(30)(40)(50); //150 //currying -> 
+    
+
+//you need to createBase function ->
+// function createBase(numb){
+//     return function(numb2){
+//         console.log(numb + numb2);
+//     }
+// }
+
+// var addSix = createBase(6);
+// addSix(10);
+// addSix(30);
+
+//
+
+//Infinite Currying -> 
+function add(x){
+    return function(y){
+        if(y === undefined){
+            console.log(x);
+            return;
+        }
+        return add(x+y);
+    }
+}
+
+add(10)(20)(30)(40)(50)(); //150
+add(10)(20)(30)(40)(50)(1)(1)(1)(1)(1)(); //155
+add(10)(2)(1)(1)(1)(1)(); //16
+add(30)(); //30 
+add(30)(2)();//32
