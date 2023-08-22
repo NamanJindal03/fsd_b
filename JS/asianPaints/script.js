@@ -9,7 +9,7 @@ const wallColorTag = document.querySelector('#wall_color');
 // function paintTheWall(wallId, wallColor, styleToBeAdded)
 
 applyBtn.addEventListener('click', () =>{
-    let wallId = wallIdTag.valueAsNumber;
+    let wallId = wallIdTag.valueAsNumber; //parseInt()
     if(wallId > 10 || wallId <= 0){
         return;
     }
