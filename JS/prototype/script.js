@@ -361,37 +361,37 @@ console.log(child); */
 
 // }
 
-class Parent{
-  // constructor(lastName, address){
-  //   this.lastName = lastName;
-  //   this.address = address;
-  // }
-  // getLastName = function () {
-  //   return this.lastName;
-  // }
-  getFirstName = function(){
-    return this.name;
-  }
-}
+// class Parent{
+//   // constructor(lastName, address){
+//   //   this.lastName = lastName;
+//   //   this.address = address;
+//   // }
+//   // getLastName = function () {
+//   //   return this.lastName;
+//   // }
+//   getFirstName = function(){
+//     return this.name;
+//   }
+// }
 
-class Child extends Parent{
-  constructor(name, age, lastName, address) {
-    // super(lastName, address); //function -> 
-    this.name = name;
-    this.age = age;
-  }
-  getFirstName = function(){
-    return this.name;
-  }
-}
+// class Child extends Parent{
+//   constructor(name, age, lastName, address) {
+//     // super(lastName, address); //function -> 
+//     this.name = name;
+//     this.age = age;
+//   }
+//   getFirstName = function(){
+//     return this.name;
+//   }
+// }
 
-const c1 = new Child('naman', 10, 'abcd', 'delhi');
-const c2 = new Child('naman2', 20, 'defg', 'banglore');
-console.log(c1);
-console.log(c1.getFirstName());
-// console.log(c1.getLastName());
-console.log(c2);
-console.log(c2.getFirstName());
+// const c1 = new Child('naman', 10, 'abcd', 'delhi');
+// const c2 = new Child('naman2', 20, 'defg', 'banglore');
+// console.log(c1);
+// console.log(c1.getFirstName());
+// // console.log(c1.getLastName());
+// console.log(c2);
+// console.log(c2.getFirstName());
 // console.log(c2.getLastName());
 
 // function StopWatch()
@@ -434,8 +434,168 @@ console.log(c2.getFirstName());
 
 /* 
   we have a personStore object
-  1) Inside personStore object, create a property green where the value is a function that
+  1) Inside personStore object, create a property greet where the value is a function that
   logs hello
-  2) 
+
+  2) Create a function personFromPersonStore that takes as input a name and an age. 
+  When called, the function wwill create a person object using the Object.create method
+  on the personStore object
+
+  3) Once first two parts are done, without chaning the code for them add an getGreeting
+  method to the personStore object that logs "Hi, my name is [name]"
 
 */
+/* 1) */
+// const personStore = {
+//   greet: function(){
+//     console.log('hello')
+//   }
+// }
+// personStore.greet();
+
+// function personFromPersonStore(name, age){
+//   const p = Object.create(personStore);
+//   p.name = name;
+//   p.age = age;
+//   return p;
+// }
+// const p1 = personFromPersonStore('naman', 10);
+// console.log(p1);
+// p1.greet()
+// personStore.getGreeting = function(){
+//   console.log(`HI, my name is ${this.name}`)
+// }
+// console.log(personStore)
+// p1.getGreeting()
+
+
+// class User{
+//   static instances = 0;
+//   constructor(name, age, count) {
+//     this.name = name;
+//     this.age = age;
+//     this.count = count;
+//     User.instances++;
+//   }
+//   increment(){
+//     this.count++;
+//   }
+//   static validateName(sampleName){
+//     if(sampleName.length > 4){
+//       return false
+//     }
+//     return true
+//   }
+//   static getCount(){
+//     return User.instances;
+//   }
+// }
+// // const u3 = new User('a', 100, 1000);;
+// // console.log(u3.validateName());
+// // let u1;
+// let name = 'nam';
+// // if(User.validateName(name)){
+// //   u1 = new User(name, 100, 3000);
+// //   console.log(u1)
+// // }
+// if(name.length > 4){
+//   const u1 = new User(name, 100, 3000);
+// }
+// const u1 = new User(name, 100, 3000);
+// const u2 = new User('abcd', 100, 3000);
+// const u3 = new User('abcd2', 100, 3000);
+// console.log(User.getCount())
+
+// class Parent{
+//   constructor(lastName, address){
+//     this.lastName = lastName;
+//     this.address = address;
+//   }
+//   getLastName() {
+//     return this.lastName;
+//   }
+//   getFirstName(){
+//     console.log('abcd');
+//   }
+// }
+
+// class Child extends Parent{
+//   constructor(name, age, lastName, address) {
+//     super(lastName, address); //function -> 
+//     this.name = name;
+//     this.age = age;
+//   }
+//   getFirstName(){
+//     super.getFirstName();
+//     console.log('child')
+//   }
+// }
+
+// const c1 = new Child('naman', 10, 'abcd', 'delhi');
+// const c2 = new Child('naman2', 20, 'defg', 'banglore');
+// // console.log(c1);
+// // console.log(c1.getFirstName());
+// c1.getFirstName();
+
+
+// class User{
+//   #id = 10;
+//   constructor(name, age, count) {
+//     this.name = name;
+//     this.age = age;
+//     this.count = count;
+//   }
+//   increment(){
+//     this.count++;
+//   }
+//   getId(){
+//     return this.#id;
+//   }
+//   setId(id){
+//     this.#id = id;
+//   }
+//   // get id(){
+//   //   return this.#id;
+//   // }
+//   // set id(random){
+//   //   this.#id = random;
+//   // }
+// }
+
+// const u1 = new User('n', 10, 0);
+// console.log(u1.getId())
+// u1.setId(200);
+// console.log(u1.id);
+// u1.setAge(20);
+
+// console.log(u1.getAge());
+
+/* 
+  setters and getters -> 
+
+*/
+
+// enumerable -> 
+
+// const obj = {
+//   name: 'naman',
+//   age: 10
+// }
+
+// for(let o in obj){
+//   console.log(o)
+// }
+
+// Object.defineProperties(obj, {
+//   nonEnumerableProperty: {
+//     value: true,
+//     enumerable: true,
+//   },
+// })
+
+// console.log(obj)
+
+// for(let o in obj){
+//   console.log(o)
+// }
+
