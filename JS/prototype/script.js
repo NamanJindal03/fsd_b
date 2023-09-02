@@ -298,26 +298,26 @@ Parent.call(child, 'abcd', 'delhi');
 console.log(child); */
 
 
-// function Parent(lastName, address){
-//   this.lastName = lastName;
-//   this.address = address;
-// }
-// Parent.prototype.getLastName = function () {
-//   return this.lastName;
-// }
+function Parent(lastName, address){
+  this.lastName = lastName;
+  this.address = address;
+}
+Parent.prototype.getLastName = function () {
+  return this.lastName;
+}
 
-// function Child (name, age, lastName, address) {
-//   Parent.call(this, lastName, address); //function -> 
-//   this.name = name;
-//   this.age = age;
-// }
+function Child (name, age, lastName, address) {
+  Parent.call(this, lastName, address); //function -> 
+  this.name = name;
+  this.age = age;
+}
 
 
-// Child.prototype = Object.create(Parent.prototype);
+Child.prototype = Object.create(Parent.prototype);
 
-// Child.prototype.getFirstName = function(){
-//   return this.name;
-// }
+Child.prototype.getFirstName = function(){
+  return this.name;
+}
 
 // const c1 = new Child('naman', 10, 'abcd', 'delhi')
 // // Parent.call(c1, 'abcd', 'delhi');
@@ -498,6 +498,29 @@ console.log(child); */
 // //   u1 = new User(name, 100, 3000);
 // //   console.log(u1)
 // // }
+
+/* Conversion of abvoe code to constructor function
+
+function User(name, age, count){
+    this.name = name;
+    this.age = age;
+    this.count = count;
+}
+User.prototype.increment = function(){
+    this.count++;
+}
+User.instances = 0;
+User.getCount = function(){
+    return User.instances;
+}
+User.validateName = function(sampleName){
+    if(sampleName.length > 4){
+        return false
+      }
+      return true
+}
+
+*/
 // if(name.length > 4){
 //   const u1 = new User(name, 100, 3000);
 // }
