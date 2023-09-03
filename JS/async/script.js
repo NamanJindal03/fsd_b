@@ -133,7 +133,7 @@
 //     console.log("i m the x 6");
 //   }, randomTimeFunc());
 
-  /* 
+/* 
     How to we handle async code
     2) how do we call the api
     3) How to we manage the relationships between the API
@@ -174,31 +174,139 @@
 //     abcd++;
 // }
 // function getsExecutedOnCallback
-const APIReturnedData = {
-    "userId": 1,
-    "id": 1,
-    "title": "delectus aut autem",
-    "completed": false
-}
-function getDataFromBackend(url){
+// const APIReturnedData = {
+//     "userId": 1,
+//     "id": 1,
+//     "title": "delectus aut autem",
+//     "completed": false
+// }
+// function getDataFromBackend(url){
 
-    // const xhr = new XMLHttpRequest();
-    // console.time()
-    // xhr.open('Get', url, true);
-    // xhr.onload = function (){
-    //     console.timeEnd();
-    //     const data = JSON.parse(xhr.responseText);
-    //     console.log(data);
-    // }
-    // xhr.send()
-    setTimeout(()=>{
-        console.log(APIReturnedData)
-    },1000)
-}
-getDataFromBackend('https://jsonplaceholder.typicode.com/todos/1' )
+//     const xhr = new XMLHttpRequest();
+//     console.time()
+//     xhr.open('Get', url, true);
+//     xhr.onload = function (){
+//         console.timeEnd();
+//         const data = JSON.parse(xhr.responseText);
+//         console.log(data);
+//     }
+//     xhr.send()
+//     // setTimeout(()=>{
+//     //     console.log(APIReturnedData)
+//     // },1000)
+// }
+// getDataFromBackend('https://jsonplaceholder.typicode.com/todos/1' )
 
 // console.time()
 // console.log('first')
-
+// setTimeout(()=>{
+//     console.log('mid')
+// },3000);
 // console.log('end')
 // console.timeEnd()
+
+/* 
+    A ->
+    B ->
+    C ->
+    D ->
+
+*/
+
+// console.log("start");
+
+// function delay(text) {
+//   setTimeout(function () {
+//     console.log(text);
+//   }, 5000);
+// }
+
+// delay("A");
+
+// delay("B");
+
+// delay("C");
+
+// delay("D");
+
+// console.log("end");
+
+// let count = 1;
+
+// function delay(text) {
+//   setTimeout(function () {
+//     console.log(text);
+//   }, 500 * count++);
+// }
+// delay('abcd')
+
+// console.log("start");
+
+// setTimeout(function () {
+//   console.log("A");
+//   setTimeout(function () {
+//     console.log("B");
+
+//     setTimeout(function () {
+//       console.log("C");
+
+//       setTimeout(function () {
+//         console.log("D");
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+// console.log("end");
+
+//Is callbacks always asynchronous?
+
+
+// function receiveCb(cb){
+//     cb();
+// }
+
+// receiveCb(function(){
+//     console.log('I am a callback, but please dont execute me asynchronously')
+// })
+
+//callbacks -> 
+// console.log('start');
+// setTimeout(()=>{
+//     console.log('mid')
+// },3000)
+// console.log('end')
+// import getProducts from './externalCode.js'
+
+// const id = 10;
+// // api.getProducts()
+// const product = getProducts()
+// product.then(()=>{
+//     console.log('products list success')
+// })
+// .catch(()=>{
+//     console.log('error on the external entity')
+// })
+// console.log(product)
+// const apiResponse = 'error';
+// //execution of the same code with promises 
+// console.log('start');
+
+
+// console.log(promiseOutput);
+// promiseOutput.then(()=>{
+//     console.log('list of all products fromt he backend')
+// })
+// console.log('end')
+
+const promiseState = new Promise((resolve, reject)=>{
+
+})
+
+console.log(promiseState);
+promiseState.then(()=>{
+    console.log('please help me in executing')
+})
+.catch(()=>{
+    console.log('please reject me')
+})
