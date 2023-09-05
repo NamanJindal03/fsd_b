@@ -276,21 +276,21 @@
 //     console.log('mid')
 // },3000)
 // console.log('end')
-// import getProducts from './externalCode.js'
+import getProducts from './externalCode.js'
 
-// const id = 10;
-// // api.getProducts()
-// const product = getProducts()
-// product.then(()=>{
-//     console.log('products list success')
-// })
-// .catch(()=>{
-//     console.log('error on the external entity')
-// })
-// console.log(product)
-// const apiResponse = 'error';
-// //execution of the same code with promises 
-// console.log('start');
+const id = 10;
+// api.getProducts()
+const product = getProducts()
+product.then(()=>{
+    console.log('products list success')
+})
+.catch(()=>{
+    console.log('error on the external entity')
+})
+console.log(product)
+const apiResponse = 'error';
+//execution of the same code with promises 
+console.log('start');
 
 
 // console.log(promiseOutput);
@@ -299,14 +299,109 @@
 // })
 // console.log('end')
 
-const promiseState = new Promise((resolve, reject)=>{
+// const promiseState = new Promise((resolve, reject)=>{
 
-})
+// })
 
-console.log(promiseState);
-promiseState.then(()=>{
-    console.log('please help me in executing')
-})
-.catch(()=>{
-    console.log('please reject me')
-})
+// console.log(promiseState);
+// promiseState.then(()=>{
+//     console.log('please help me in executing')
+// })
+// .catch(()=>{
+//     console.log('please reject me')
+// })
+
+
+// console.log('start')
+// const promiseOutput = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve();
+//     },10000)
+// })
+// console.log(promiseOutput);
+// promiseOutput.then(()=>{
+//     console.log('mid')
+// })
+
+// console.log('end');
+
+
+// function getPromise(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             // console.log('this is logged')
+//             reject();
+//         },1000)
+//     })
+//     // return internalFuncPromsie;
+// }
+
+// const promiseValueNew = getPromise();
+// promiseValueNew.then(()=>{
+//     console.log('this is called because of resolve')
+// })
+// console.log(promiseValueNew)
+// getPromise()
+//     .then(()=>{
+//         console.log('this is called becuase of promise')
+//     })
+//     .catch(()=>{
+//         console.log('error is seen')
+//     })
+
+
+// function random(){
+//     // console.log('abcd')
+//     return 10;
+// }
+
+// const storeRandom = random();
+// console.log(storeRandom);
+
+// const abcd = 20;
+
+
+// function processPayment(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             // console.log('this is logged')
+//             // reject();
+//             // resolve('payment success')
+//             reject({error: 'user payment timed out '})
+//         },1000)
+//     })
+//     // return internalFuncPromsie;
+// }
+
+
+
+
+
+// processPayment()
+//     .then((data)=>{
+//         // console.log('this is called becuase of promise')
+//         console.log(data);
+//     })
+//     .catch((err)=>{
+//         console.log(err.error)
+//     })
+
+/* 
+    fetch is a promise based web api -> which helps us in calling
+    the api of some external services/ codes
+
+*/
+
+// const apiResponse = fetch('https://jsonplaceholder.typicode.com/todos/1');
+// apiResponse.then(()=>{
+//     console.log('api executed')
+// })
+// .catch(()=>{
+//     console.log('api failed')
+// })
+// console.log(apiResponse)
+
+// const timer = setTimeout(()=>{
+//     console.log('abcd')
+// }, 1000)
+// clearTimeout(timer);
