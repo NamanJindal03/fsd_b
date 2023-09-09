@@ -261,7 +261,6 @@
 
 //Is callbacks always asynchronous?
 
-
 // function receiveCb(cb){
 //     cb();
 // }
@@ -270,28 +269,28 @@
 //     console.log('I am a callback, but please dont execute me asynchronously')
 // })
 
-//callbacks -> 
+//callbacks ->
 // console.log('start');
 // setTimeout(()=>{
 //     console.log('mid')
 // },3000)
 // console.log('end')
-import getProducts from './externalCode.js'
+// import getProducts from "./externalCode.js";
 
-const id = 10;
-// api.getProducts()
-const product = getProducts()
-product.then(()=>{
-    console.log('products list success')
-})
-.catch(()=>{
-    console.log('error on the external entity')
-})
-console.log(product)
-const apiResponse = 'error';
-//execution of the same code with promises 
-console.log('start');
-
+// const id = 10;
+// // api.getProducts()
+// const product = getProducts();
+// product
+//   .then(() => {
+//     console.log("products list success");
+//   })
+//   .catch(() => {
+//     console.log("error on the external entity");
+//   });
+// console.log(product);
+// const apiResponse = "error";
+// //execution of the same code with promises
+// console.log("start");
 
 // console.log(promiseOutput);
 // promiseOutput.then(()=>{
@@ -311,7 +310,6 @@ console.log('start');
 //     console.log('please reject me')
 // })
 
-
 // console.log('start')
 // const promiseOutput = new Promise((resolve, reject)=>{
 //     setTimeout(()=>{
@@ -324,7 +322,6 @@ console.log('start');
 // })
 
 // console.log('end');
-
 
 // function getPromise(){
 //     return new Promise((resolve, reject)=>{
@@ -349,7 +346,6 @@ console.log('start');
 //         console.log('error is seen')
 //     })
 
-
 // function random(){
 //     // console.log('abcd')
 //     return 10;
@@ -359,7 +355,6 @@ console.log('start');
 // console.log(storeRandom);
 
 // const abcd = 20;
-
 
 // function processPayment(){
 //     return new Promise((resolve, reject)=>{
@@ -372,10 +367,6 @@ console.log('start');
 //     })
 //     // return internalFuncPromsie;
 // }
-
-
-
-
 
 // processPayment()
 //     .then((data)=>{
@@ -401,7 +392,268 @@ console.log('start');
 // })
 // console.log(apiResponse)
 
-// const timer = setTimeout(()=>{
-//     console.log('abcd')
-// }, 1000)
-// clearTimeout(timer);
+// const promiseStore = new Promise((resolved, rejected)=>{
+
+// });
+// setTimeout(()=>{
+//     console.log(promiseStore);
+// },5000);
+
+// const apiResponse = fetch('https://jsonplaceholder.typicode.com/todos/1');
+// apiResponse.then(()=>{
+//     console.log('api executed')
+// })
+// .catch(()=>{
+//     console.log('api failed')
+// })
+// function randomPrint(r) {
+//   console.log(r);
+// }
+// const apiResponse2 = fetch("https://jsonplaceholder.typicode.com/todos/1", {
+//   method: "GET",
+// })
+//   .then((data) => {
+//     // console.log('api executed')
+//     // console.log(data);
+//     return data.json();
+//   })
+//   .then((result) => {
+//     // console.log(abcd);
+//     // console.log(result);
+//     randomPrint(result);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//     // console.log('api failed')
+//   });
+
+// const nestedCallbacks = () => {
+//     setTimeout(()=>{
+//         setTimeout(()=>{
+
+//         },500)
+//     }, 1000)
+// }
+
+/* 
+    fetch() -> function not written by us -> 
+    who will determine what we pass to this fetch() ???
+
+    the first argument is a url -> 
+    the second argument is a optional orgument -> which goes by the name of options ->
+
+    fetch(url, options) //information that fetch expects -> 
+
+    {
+        method: 
+    }
+
+*/
+
+// function read({ title, id:id2 }) {
+//   console.log(title, id2);
+// }
+
+// const callapi = fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "GET",
+// })
+//   .then((data) => {
+//     // return JSON.parse(data)
+//     return data.json();
+//   })
+//   .then((data)=>{
+//     read(data[0]);
+//   })
+
+//   .catch(() => {
+//     console.log("error");
+//   });
+
+
+// const promiseFunc = ()=>{
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             resolve({name: 'naman'})
+//         },3000)
+//     })
+// }
+// const promiseVal = promiseFunc()
+
+//You have to covert the given promise based code to callbacks approach ->
+
+// const promiseFunc = ()=>{
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             resolve({name: 'naman'})
+//         },3000)
+//     })
+// }
+// promiseFunc().then(()=>{
+//     console.log('phone bought');
+//     console.log('laptop bought');
+//     console.log('charger bought');
+// })
+
+// function printData() {
+//     setTimeout(()=>{
+//         console.log('phone bought');
+//         console.log('laptop bought');
+//         console.log('charger bought');
+//     },3000)
+// }
+
+// printData()
+
+
+//getProducts 
+//getCategories ->
+
+// const categories = [
+//   {
+//     category: 'healthCare',
+//     products: 140,
+//     sellersInvolved: 20
+//   },
+//   {
+//       category: 'toys',
+//       products: 10,
+//       sellersInvolved: 2
+//   },
+// ];
+
+// const products = 
+//   {
+//     healthCare: [{
+//         name: 'medicine1',
+//         qty: 10,
+//         brand: 'abcd'
+//       },
+//       {
+//         name: 'medicine2',
+//         qty: 20,
+//         brand: 'abcd2'
+//       },
+//     ],
+//     toys: [
+//       {
+//         name: 'toy1',
+//         qty: 10,
+//         brand: 'abcd'
+//       },
+//       {
+//         name: 'toy2',
+//         qty: 20,
+//         brand: 'abcd2'
+//       },
+//     ],
+//   }
+
+//   const errResposne = {
+//     status: 400,
+//     errorMessage: 'Please provide the category'
+//   }
+// //getCategories API
+// const getCategories = () =>{
+//   return new Promise((resolve, reject) =>{
+//     setTimeout(()=>{
+//       resolve(categories)
+//     },1000)
+//   })
+// }
+
+// //getProductDetails API
+// const getProductsDetails = (category) =>{
+//   return new Promise((resolve, reject) =>{
+//     setTimeout(()=>{
+//       if(!category) reject(errResposne)
+//       // if(category === 'healthcare'){
+//         resolve(products[category])
+//       // }
+      
+//     })
+//   })
+// }
+/* 
+  ABOVE -> Mocking the API ->
+*/
+
+/* 
+FE -> 
+*/
+// const categoriesResData = getCategories();
+// categoriesResData.then((categoryData)=>{
+//   // return 
+//   const currentCategory = categoryData[1].category;
+//   return getProductsDetails(currentCategory);
+// })
+// .then((productDetails)=>{
+//   console.log(productDetails);
+// })
+
+// const productsRes = getProductsDetails()
+// .then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=>{
+//   console.log(err)
+// })
+
+const API = "https://real-puce-turtle-tam.cyclic.cloud/";
+
+//stock/stock-symbols
+// let stockName;
+// const stockMarketCap = fetch(`${API}stock/stock-market-caps`)
+//     .then((data)=>{
+//       return data.json();
+//     })
+//     .then((data)=>{
+//       console.log(data)
+//       return data;
+//     })
+
+// const stockName = fetch(`${API}stock/stock-symbols`)
+//     .then((data)=>{
+//       return data.json();
+//     })
+//     .then((data)=>{
+//       console.log(data)
+//       return data;
+//     })
+
+//     console.log(stockMarketCap);
+//     console.log(stockName);
+
+let marketCapData;
+let stockNameData;
+function getHighestMarketCapStockDetails(){
+  fetch(`${API}stock/stock-market-caps`)
+    .then((data)=>{
+      return data.json();
+    })
+    .then((stockMarketCapData)=>{
+      marketCapData = stockMarketCapData;
+      return fetch(`${API}stock/stock-symbols`);
+    })
+    .then((data)=>{
+      return data.json();
+    })
+    .then((stockNameDataFromAPI)=>{
+      stockNameData = stockNameDataFromAPI;
+      console.log(stockNameData);
+      console.log(marketCapData);
+
+      const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
+        return stockB['market-cap'] - stockA['market-cap']
+      })
+      const topMarketCapStock = sortedMarketCapData[0];
+      const [filteredStockName] = stockNameData.filter((stock)=>{
+        return stock.symbol === topMarketCapStock.symbol
+      })
+      console.log(filteredStockName);
+      console.log(topMarketCapStock);
+      const consolidatedData = {...filteredStockName, ...topMarketCapStock};
+      console.log(consolidatedData);
+    })
+
+}
+getHighestMarketCapStockDetails();
