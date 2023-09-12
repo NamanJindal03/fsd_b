@@ -623,37 +623,164 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 //     console.log(stockMarketCap);
 //     console.log(stockName);
 
-let marketCapData;
-let stockNameData;
-function getHighestMarketCapStockDetails(){
-  fetch(`${API}stock/stock-market-caps`)
-    .then((data)=>{
-      return data.json();
-    })
-    .then((stockMarketCapData)=>{
-      marketCapData = stockMarketCapData;
-      return fetch(`${API}stock/stock-symbols`);
-    })
-    .then((data)=>{
-      return data.json();
-    })
-    .then((stockNameDataFromAPI)=>{
-      stockNameData = stockNameDataFromAPI;
-      console.log(stockNameData);
-      console.log(marketCapData);
+// let marketCapData;
+// let stockNameData;
+// function getHighestMarketCapStockDetails(){
+//   fetch(`${API}stock/stock-market-caps`)
+//     .then((data)=>{
+//       return data.json();
+//     })
+//     .then((stockMarketCapData)=>{
+//       marketCapData = stockMarketCapData;
+//       return fetch(`${API}stock/stock-symbols`);
+//     })
+//     .then((data)=>{
+//       return data.json();
+//     })
+//     .then((stockNameDataFromAPI)=>{
+//       stockNameData = stockNameDataFromAPI;
+//       console.log(stockNameData);
+//       console.log(marketCapData);
 
-      const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
-        return stockB['market-cap'] - stockA['market-cap']
-      })
-      const topMarketCapStock = sortedMarketCapData[0];
-      const [filteredStockName] = stockNameData.filter((stock)=>{
-        return stock.symbol === topMarketCapStock.symbol
-      })
-      console.log(filteredStockName);
-      console.log(topMarketCapStock);
-      const consolidatedData = {...filteredStockName, ...topMarketCapStock};
-      console.log(consolidatedData);
-    })
+//       const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
+//         return stockB['market-cap'] - stockA['market-cap']
+//       })
+//       const topMarketCapStock = sortedMarketCapData[0];
+//       const [filteredStockName] = stockNameData.filter((stock)=>{
+//         return stock.symbol === topMarketCapStock.symbol
+//       })
+//       console.log(filteredStockName);
+//       console.log(topMarketCapStock);
+//       const consolidatedData = {...filteredStockName, ...topMarketCapStock};
+//       console.log(consolidatedData);
+//     })
 
+// }
+// getHighestMarketCapStockDetails();
+
+//make todo list
+//do todo 1
+//do todo 2
+//do todo 3
+//relax
+
+// function executeTasks(){
+//   setTimeout(()=>{
+//     console.log('make todo list')
+//     setTimeout(()=>{
+//       console.log('do todo 1');
+//       setTimeout(()=>{
+//         console.log('do todo 2')
+//         setTimeout(()=>{
+//           console.log('do todo 3')
+//           setTimeout(()=>{
+//             console.log('relax')
+//           }, 10000)
+//         }, 500)
+//       }, 3000)
+//     }, 2000)
+//   }, 1000)
+// }
+// executeTasks();
+
+// setTimeout(()=>{
+//   console.log('task1')
+// },500)
+// setTimeout(()=>{
+//   console.log('task2')
+// },1000)
+
+/* 
+    Razorpay code -> this is a black box for us -> 
+*/
+function executePayment(cb1, cb2){
+  //vlaidating usser information
+
+  //validating user payment details 
+  //validating a bunch fo more stuff
+  //receiving the payment 
+  cb1()
+  cb1()
+  cb1()
+  cb2()
 }
-getHighestMarketCapStockDetails();
+
+
+//Razorpay -> payment gateway -> exexutePaymnet
+//callbacks -> 
+
+let userBilled = 1000;
+
+executePayment(
+  chargeTheUser,
+  displayOrderProcessed
+)
+
+
+function chargeTheUser(userBilled){
+  console.log('user charged', userBilled);
+}
+
+
+/* 
+  Trusting the company who we pass our callback that they will basically 
+    1) execute our funciton on right time 
+    2) execute our function right number of times 
+    3) if certain error comes up they will let us know 
+
+*/
+
+
+
+executePayment()
+  .then(()=>{
+    chargeTheUser()
+  })
+  .then(()=>{
+    displayOrderProcessed()
+  })
+  .catch(()=>{
+    console.log('order cannot be processed')
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function executeSomeAPI(cb){
+  setTimeout(()=>{//api work
+    cb()//my work
+  },1000)
+}
+
+executeSomeAPI(function(){})
+
+
+
+function executeSomeAPIThroughPromise(){
+  //api work
+  return new Promise((resolve, reject)=>{
+    resolve();
+  })
+}
+
+executeSomeAPIThroughPromise()
+  .then(()=>{
+    cb();//my work
+  })
