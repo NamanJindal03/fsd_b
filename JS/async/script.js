@@ -692,34 +692,34 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 
 /* 
     Razorpay code -> this is a black box for us -> 
-*/
-function executePayment(cb1, cb2){
-  //vlaidating usser information
+// */
+// function executePayment(cb1, cb2){
+//   //vlaidating usser information
 
-  //validating user payment details 
-  //validating a bunch fo more stuff
-  //receiving the payment 
-  cb1()
-  cb1()
-  cb1()
-  cb2()
-}
+//   //validating user payment details 
+//   //validating a bunch fo more stuff
+//   //receiving the payment 
+//   cb1()
+//   cb1()
+//   cb1()
+//   cb2()
+// }
 
 
 //Razorpay -> payment gateway -> exexutePaymnet
 //callbacks -> 
 
-let userBilled = 1000;
+// let userBilled = 1000;
 
-executePayment(
-  chargeTheUser,
-  displayOrderProcessed
-)
+// executePayment(
+//   chargeTheUser,
+//   displayOrderProcessed
+// )
 
 
-function chargeTheUser(userBilled){
-  console.log('user charged', userBilled);
-}
+// function chargeTheUser(userBilled){
+//   console.log('user charged', userBilled);
+// }
 
 
 /* 
@@ -732,16 +732,49 @@ function chargeTheUser(userBilled){
 
 
 
-executePayment()
-  .then(()=>{
-    chargeTheUser()
-  })
-  .then(()=>{
-    displayOrderProcessed()
-  })
-  .catch(()=>{
-    console.log('order cannot be processed')
-  })
+// executePayment()
+//   .then(()=>{
+//     chargeTheUser()
+//   })
+//   .then(()=>{
+//     displayOrderProcessed()
+//   })
+//   .catch(()=>{
+//     console.log('order cannot be processed')
+//   })
+
+
+
+
+
+
+// let marketCapData;
+// let stockNameData;
+// // const API = "https://real-puce-turtle-tam.cyclic.cloud/";
+
+// async function getHighestMarketCapStockDetails(){
+//     try{
+//     const apiResponse = await fetch(`${API}stock/stock-market-caps`)
+//     marketCapData = await apiResponse.json()
+//     const apiResponse2 = await fetch(`${API}stock/stock-symbols`)
+//     stockNameData = await apiResponse2.json()
+//     const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
+//         return stockB['market-cap'] - stockA['market-cap']
+//       })
+//       const topMarketCapStock = sortedMarketCapData[0];
+//       const [filteredStockName] = stockNameData.filter((stock)=>{
+//         return stock.symbol === topMarketCapStock.symbol
+//       })
+//       console.log(filteredStockName);
+//       console.log(topMarketCapStock);
+//       const consolidatedData = {...filteredStockName, ...topMarketCapStock};
+//       console.log(consolidatedData);
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+// getHighestMarketCapStockDetails()
 
 
 
@@ -757,30 +790,38 @@ executePayment()
 
 
 
+// function executeSomeAPI(cb){
+//   setTimeout(()=>{//api work
+//     cb()//my work
+//   },1000)
+// }
+
+// executeSomeAPI(function(){})
+
+
+
+// function executeSomeAPIThroughPromise(){
+//   //api work
+//   return new Promise((resolve, reject)=>{
+//     resolve();
+//   })
+// }
 
 
 
 
+// async function middleware(){
+//   await placeOrder()
+// }
 
+// middleware()
 
-function executeSomeAPI(cb){
-  setTimeout(()=>{//api work
-    cb()//my work
-  },1000)
-}
+// placeOrder().then((message) => {
+//   console.log(message);
+// })
 
-executeSomeAPI(function(){})
+// .catch((err)=>{
+//     console.log(err)
+// })
+// await placeOrder();
 
-
-
-function executeSomeAPIThroughPromise(){
-  //api work
-  return new Promise((resolve, reject)=>{
-    resolve();
-  })
-}
-
-executeSomeAPIThroughPromise()
-  .then(()=>{
-    cb();//my work
-  })
