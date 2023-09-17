@@ -598,7 +598,7 @@ FE ->
 //   console.log(err)
 // })
 
-const API = "https://real-puce-turtle-tam.cyclic.cloud/";
+// const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 
 //stock/stock-symbols
 // let stockName;
@@ -751,10 +751,26 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 // let marketCapData;
 // let stockNameData;
 // // const API = "https://real-puce-turtle-tam.cyclic.cloud/";
+// const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 
 // async function getHighestMarketCapStockDetails(){
 //     try{
-//     const apiResponse = await fetch(`${API}stock/stock-market-caps`)
+//     const apiResponse = await fetch(`${API}stoc/stock-market-caps`)
+//     console.log(apiResponse);
+//     if(!apiResponse.ok){
+//       throw new Error('ahhhhh there is something wrong that you are doing');
+
+//       // console.log('working');
+//       // return;
+//       // new Promise((resolve, reject)=>{
+//       //   reject('Something wrong with the frontnend request')
+//       // })
+//       // return Promise.reject('Something wrong with the frontnend request');
+//     }
+//     console.log('everything smoothly working')
+//     // new Error('abcd');
+//     // return Promise.reject()
+//     // console.log('I was able to come till here')
 //     marketCapData = await apiResponse.json()
 //     const apiResponse2 = await fetch(`${API}stock/stock-symbols`)
 //     stockNameData = await apiResponse2.json()
@@ -765,8 +781,6 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 //       const [filteredStockName] = stockNameData.filter((stock)=>{
 //         return stock.symbol === topMarketCapStock.symbol
 //       })
-//       console.log(filteredStockName);
-//       console.log(topMarketCapStock);
 //       const consolidatedData = {...filteredStockName, ...topMarketCapStock};
 //       console.log(consolidatedData);
 //     }
@@ -776,11 +790,7 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 // }
 // getHighestMarketCapStockDetails()
 
-
-
-
-
-
+// Status Codes -> 
 
 
 
@@ -825,3 +835,342 @@ const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 // })
 // await placeOrder();
 
+
+// async function testFetch(){
+//   try{
+//     const fetchResponse = await fetch('https://real-puce-turtle-tam.cyclic.cloud/stoc/stock-market-caps')
+    
+//     console.log(fetchResponse);
+//     if(!fetchResponse.ok){
+//       console.log('I am not okay');
+//       return;
+//     }
+//   }
+//   catch(err){
+//     console.log(err)
+//   }
+// }
+// testFetch()
+
+//you can learn coding only by doing -> 
+
+//assumption of fetch execution
+// function customFetch(){
+//   return new Promise((resolve, reject)=>{
+//     const obj ={};
+//     if(status === '4xx'){
+//       obj.ok = false;
+//       resolve(obj);
+//     }
+//     else if(status === '2xx'){
+//       obj.ok = true;
+//       resolve(obj)
+//     }
+//     else{
+//       reject('Error')
+//     }
+//   })
+// }
+
+
+//Promise.all
+
+// /stock-market-caps
+// /stock-symbols
+// /stock-prices
+
+// function TaskA1(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+      
+//     },1000)
+//   })
+// }
+
+// function TaskA2(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('task a2 done')
+//     },5000)
+//   })
+// }
+
+
+// function TaskB(a1, a2){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       if( !(a1 && a2) ){
+//         reject('params not provided')
+//       }
+//       resolve('task B done')
+//     },1000)
+//   })
+// }
+// let a1;
+// let a2;
+// const arr = Promise.all([TaskA1(), TaskA2()]);
+// arr.then((data)=>{
+//   console.log(data)
+//   return TaskB(data[0], data[1])
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=>{
+//   console.log(err)
+// })
+
+//3000ms 
+// TaskA1()
+//   .then((data)=>{
+//     a1 = data;
+//     return TaskA2()
+//   })
+//   .then((data)=>{
+//     a2 = data;
+//     return TaskB(a1,a2)
+//   })
+//   .then((data)=>{
+//     console.log(data);
+//   })  
+
+// const varP1 = function(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//       resolve('I am resolved in x time')
+//     },1000)
+//   })
+// }
+
+// const varP2 = function(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//       resolve('I am resolved in t time')
+//     },3000)
+//   })
+// }
+// const sample = varP2();
+// varP1().then((data)=>{
+//   console.log(data);
+//   return sample
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+
+
+// function TaskA1(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('task a1 done')
+//     },1000)
+//   })
+// }
+
+// function TaskA2(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('task a2 done')
+//     },5000)
+//   })
+// }
+
+
+// function TaskB(a1, a2){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       if( !(a1 && a2) ){
+//         reject('params not provided')
+//       }
+//       resolve('task B done')
+//     },1000)
+//   })
+// }
+// let a1;
+// let a2;
+// const arr = Promise.allSettled([TaskA1(), TaskA2()]);
+// arr.then((data)=>{
+//   console.log(data)
+//   if(data[0].status === "fulfilled" && data[1].status === "fulfilled"){
+//     return TaskB(data[0].value, data[1].value)
+//   }
+//   throw new Error('One of the calls couldnt make it')
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=> console.log(err))
+
+// .catch((err)=>{
+//   console.log(err)
+// })
+
+//Race
+
+// function TaskA1(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('ewfwef')
+//     },1000)
+//   })
+// }
+
+// function TaskA2(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('task a2 done')
+//     },5000)
+//   })
+// }
+
+// function TaskA3(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve('task a3 done')
+//     },1000)
+//   })
+// }
+
+// let a1;
+// let a2;
+// const arr = Promise.any([TaskA1(), TaskA2(), TaskA3()]);
+// arr.then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=> console.log(err))
+
+// const isEverythingGood = false;
+
+// const timerID = setTimeout(()=>{
+//   console.log('executed')
+// }, 1000)
+// console.log(timerID);
+
+// const timerID2 = setTimeout(()=>{
+//   console.log('executed2')
+// }, 2000)
+// console.log(timerID2);
+// if(!isEverythingGood){
+//   // console.log(timerID);
+//   clearTimeout(timerID);
+//   clearTimeout(timerID2);
+// }
+
+// let counter = 10;
+
+// const timerSI= setInterval(()=>{
+//   console.log('I will keep running')
+//   counter++;
+//   if(counter === 20){
+//     clearInterval(timerSI);
+//   }
+// },1000)
+
+
+// setTimeout(()=>{
+//   console.log("Set INterval your time is over now")
+//   clearInterval(timerSI)
+// }, 3000)
+
+// clearfuncit
+
+
+// function TaskA3(){
+//   console.log('start 3')
+//   return new Promise((resolve, reject)=>{
+//     console.log('start 4')
+//     setTimeout(()=>{
+//       console.log('start 5')
+//       resolve('task a3 done')
+//     },1000)
+//   })
+// }
+
+// console.log('start 1');
+
+// async function random(){
+//   console.log('start 2')
+//   await TaskA3()
+//   console.log('start 10')
+// }
+// console.log('start 11');
+// random();
+// console.log('start 12');
+
+// async function random2(){
+//   // console.log('abcd');
+//   // return 10;
+//   return new Promise((resolve)=>{
+//     resolve('something')
+//   })
+// }
+
+// const storeValue = random2();
+// storeValue.then((data)=>{
+//   console.log(data)
+// })
+// console.log(storeValue);
+// function abcd(){
+//   console.log('abcd')
+//   return 10
+// }
+
+// setInterval((()=>{
+//   abcd()
+// })(),1000)
+
+
+// function notAsync(){
+//   console.log('not not')
+// }
+
+// async function random2(){
+//   // console.log('abcd');
+//   // return 10;
+//   return new Promise((resolve)=>{
+//     resolve('something')
+//   })
+// }
+
+// async function middleware(){
+//   const storeValue = await random2();
+//   const checkcheck = await notAsync();
+//   console.log(storeValue)
+// }
+// middleware();
+
+// let data = new Promise((resolve, reject)=>{
+//   setTimeout(()=>{
+//     // reject('rejected')
+//     // resolve('abcd');
+//   })
+// })
+// data.then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=>{
+//   console.log(err)
+// })
+// .finally(()=>{
+//   console.log('I will always be executed no matter what')
+// })
+
+// setTimeout(()=>{
+//   console.log(("I am set Timeout"))
+// },0)
+
+// new Promise((resolve, reject)=>{
+//   resolve(" I am a reoslved promise")
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+
+
+// console.log('I am normal')
+
+setIntervalTimerId = setInterval(()=>{
+  currentTime = new Date().getTime();
+  elapsedTime = currentTime - startTimer;
+  console.log(elapsedTime);
+}, 500)

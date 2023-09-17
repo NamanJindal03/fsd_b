@@ -69,30 +69,32 @@
 // }
 // getData();
 
-let marketCapData;
-let stockNameData;
-const API = "https://real-puce-turtle-tam.cyclic.cloud/";
+// let marketCapData;
+// let stockNameData;
+// const API = "https://real-puce-turtle-tam.cyclic.cloud/";
 
-async function getHighestMarketCapStockDetails(){
-    try{
-    const apiResponse = await fetch(`${API}stock/stock-market-caps`)
-    marketCapData = await apiResponse.json()
-    const apiResponse2 = await fetch(`${API}stock/stock-symbols`)
-    stockNameData = await apiResponse2.json()
-    const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
-        return stockB['market-cap'] - stockA['market-cap']
-      })
-      const topMarketCapStock = sortedMarketCapData[0];
-      const [filteredStockName] = stockNameData.filter((stock)=>{
-        return stock.symbol === topMarketCapStock.symbol
-      })
-      console.log(filteredStockName);
-      console.log(topMarketCapStock);
-      const consolidatedData = {...filteredStockName, ...topMarketCapStock};
-      console.log(consolidatedData);
-    }
-    catch(err){
-        console.log(err);
-    }
-}
-getHighestMarketCapStockDetails()
+// async function getHighestMarketCapStockDetails(){
+//     try{
+//     const apiResponse = await fetch(`${API}stock/stock-market-caps`)
+//     marketCapData = await apiResponse.json()
+//     const apiResponse2 = await fetch(`${API}stock/stock-symbols`)
+//     stockNameData = await apiResponse2.json()
+//     const sortedMarketCapData = marketCapData.sort((stockA, stockB)=>{
+//         return stockB['market-cap'] - stockA['market-cap']
+//       })
+//       const topMarketCapStock = sortedMarketCapData[0];
+//       const [filteredStockName] = stockNameData.filter((stock)=>{
+//         return stock.symbol === topMarketCapStock.symbol
+//       })
+//       console.log(filteredStockName);
+//       console.log(topMarketCapStock);
+//       const consolidatedData = {...filteredStockName, ...topMarketCapStock};
+//       console.log(consolidatedData);
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+// getHighestMarketCapStockDetails()
+
+
