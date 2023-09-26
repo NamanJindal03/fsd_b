@@ -41,6 +41,7 @@ function debounce(fn, delay){
 }
 
 
+
 // const debouncedSearch = debounce2(getUserDetails, 1000);
 // const debouncedSearch2 = debounce2(getUserDetails, 1000);
 // let toggle = true;
@@ -66,3 +67,39 @@ function debounce(fn, delay){
 //         }, delay)
 //     }
 // }
+
+
+function throttleExample(){
+    console.log('I have been throttled');
+}
+
+function throttle(fn, delay){
+    //write throttle logic
+    let canExecute = false;
+    let timerId;
+    return function(){
+        // console.log('called')
+        if(canExecute){
+            fn();
+        }
+        canExecute = false;
+        if(!timerId){
+            timerId = setTimeout(()=>{
+                canExecute = true
+                timerId = null;
+            }, delay)
+        }
+    }
+}
+
+const haveBeenThrottled = throttle(throttleExample, 500);
+
+// for(let i=0; i<4000; i++){
+//     setTimeout(()=>{
+//         haveBeenThrottled()
+//     },1)
+// }
+window.addEventListener('scroll',()=>{
+    console.log('scroll called')
+    haveBeenThrottled();
+})
