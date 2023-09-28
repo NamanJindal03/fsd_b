@@ -75,7 +75,7 @@ function throttleExample(){
 
 function throttle(fn, delay){
     //write throttle logic
-    let canExecute = false;
+    let canExecute = true;
     let timerId;
     return function(){
         // console.log('called')
