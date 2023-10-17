@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+// import {useState} from 'react'
 import {Child} from './Child'
 
 // const number1 = 1;
@@ -8,6 +9,9 @@ export function App() {
   // function aFunctionToBePassedAsProp(){
   //   console.log('i am called')
   // }
+  const [count, setCount] = useState(0);
+  // console.log(count);
+  // console.log(setCount);
 
   const productInformation = [
     {
