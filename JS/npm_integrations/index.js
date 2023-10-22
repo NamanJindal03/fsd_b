@@ -1,14 +1,6 @@
 import { specialSort, specialSort2 } from "./common.js";
-import abcd from "./common.js";
-import axios from 'axios';
 
-specialSort();
-specialSort2();
-console.log(abcd);
-abcd.iAmDefault();
-abcd.iAmAnotherDefaultFunction();
-
-const API = `https://jsonplaceholder.typicode.com`
+specialSort()
 // ///comments?postId=2
 // for(let id=1; id<5; id++){
 

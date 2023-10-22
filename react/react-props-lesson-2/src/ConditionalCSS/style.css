@@ -1,0 +1,11 @@
+.negative {
+    color: red;
+}
+.positive{
+    color: green;
+}
+.common{
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: 600;
+}

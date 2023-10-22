@@ -308,18 +308,34 @@ const object2 = {
 
 // console.log(object?.address?.state);
 
-if(object.address && object.address.state){
-    console.log(object.address.state);
-}
-else{
-    console.log("i can't give you the state")
-}
-if(object2.address && object2.address.state){
-    console.log(object2.address.state);
-}
-else{
-    console.log("i can't give you the state")
-}
+// if(object.address && object.address.state){
+//     console.log(object.address.state);
+// }
+// else{
+//     console.log("i can't give you the state")
+// }
+// if(object2.address && object2.address.state){
+//     console.log(object2.address.state);
+// }
+// else{
+//     console.log("i can't give you the state")
+// }
+
+// if(object.address?.state){
+//     console.log(object.address.state);
+// }
+// else{
+//     console.log('i cant give you the state')
+// }
+// if(object2.address?.state){
+//     console.log(object.address.state);
+// }
+// else{
+//     console.log('i cant give you the state')
+// }
+
+
+
 
 
 
@@ -340,3 +356,67 @@ else{
 //         state: 'solid'
 //     }
 // }
+
+const assumedData = {
+    name: {
+        firstName: 'naman',
+        lastName: 'jindal'
+    },
+    age: {
+        officialAge: 20,
+        unOfficialAge: 19,
+    },
+}
+
+const response = fetch('some api call');
+const {name, age, address} = response.json();
+
+if(address?.state){
+    console.log(address.state)
+}
+else{
+    console.log('i cant give you the state')
+}
+
+
+
+setTimeout(function(){
+    console.log(1)
+},0)
+setTimeout(function(){
+    console.log(2)
+},0)
+const check = new Promise((resolve, reject)=>{
+    resolve();
+})
+console.log(3);
+check.then(()=>{
+    console.log(4)
+})
+check.then(()=>{
+    console.log(5);
+})
+setTimeout(function(){
+    console.log(6)
+})
+
+
+let checkP = new Promise(function(resolve, reject){
+    reject('I am rejected');
+    setTimeout(function(){
+        reject('I am again rejected');
+    })
+    resolve('I am resovled')
+})
+
+checkP.then(()=>{},(data)=>{
+    console.log('executed', data)
+})
+.then(()=>{
+    console.log('data')
+}, (err)=>{
+    console.log(err)
+})
+.catch((err)=>{
+    console.log('aahh you failed', err)
+})

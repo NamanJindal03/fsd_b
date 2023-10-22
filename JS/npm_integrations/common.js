@@ -16,10 +16,7 @@ const iAmAnotherDefaultFunction = () => {
     console.log('anotherrrrrr defualt')
 }
 
-export default {
-    iAmDefault,
-    iAmAnotherDefaultFunction
-}
+export default iAmDefault;
 
 export {
     specialSort,
