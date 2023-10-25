@@ -1,0 +1,17 @@
+/* Card Style */
+.card{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255, 75, 75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.cardBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}

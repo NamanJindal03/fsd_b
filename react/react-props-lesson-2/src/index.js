@@ -9,8 +9,9 @@ import CardsDisplay from './Exec2/CardsDisplay';
 // import Index from './L4_conditional_rendering/Index';
 import Parent from './RandomExercise/Parent';
 import Index from './ConditionalCSS/Index';
-import App from './exploring_packages/App';
-import 'bootstrap/dist/css/bootstrap.css';
+// import App from './exploring_packages/App';
+import App from './tictactoe/App'
+// import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
