@@ -1,0 +1,48 @@
+main{
+    width: 60%;
+    border: 1px solid black;
+    padding: 4px 8px;
+}
+h2{
+    text-align: center;
+}
+
+.taskSection{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.taskHeading{
+    width: 20%;
+    background-color: aqua;
+}
+.taskArea{
+    flex: 1;
+    background-color: rgb(236, 236, 236);
+    height: 3rem;
+    padding: 2px 4px;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+/* Tasks */
+.task{
+    border: 2px solid black;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#red{
+    background-color: red;
+    color: white;
+}
+#blue{
+    background-color: blue;
+    color: white;
+}
+#purple{
+    background-color: purple;
+    color: white;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main >
+        <h1>Priority List</h1>
+        <section class="taskSection">
+            <h2 class="taskHeading">Priority 1</h2>
+            <div class="taskArea"></div>
+        </section>
+        <section class="taskSection">
+            <h2 class="taskHeading">Priority 2</h2>
+            <div class="taskArea"></div>
+        </section>
+        <section class="taskSection">
+            <h2 class="taskHeading">Priority 3</h2>
+            <div class="taskArea"></div>
+        </section>
+        <section class="taskSection" id="unassignedTaskSection">
+            <h2 class="taskHeading">Unassigned Task</h2>
+            <div class="taskArea" id="unassignedTaskArea">
+                <div class="task" id="red" draggable="true">
+                    A
+                </div>
+                <div class="task" id="blue" draggable="true">
+                    B
+                </div>
+                <div class="task" id="purple" draggable="true">
+                    C
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
