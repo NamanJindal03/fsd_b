@@ -12,10 +12,11 @@ import Index from './ConditionalCSS/Index';
 // import App from './exploring_packages/App';
 // import App from './tictactoe/App'
 // import Counter from './batching/Counter';
-import TroubledObject from './batching/TroubledObject';
+// import TroubledObject from './batching/TroubledObject';
+import Form from './forms/Form';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <TroubledObject />
+    <Form />
 );
 
