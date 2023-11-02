@@ -7,7 +7,7 @@ import StateLesson2 from './state_lesson_2/StateLesson2'
 // import Counter from './state_lesson_1/Counter';
 import CardsDisplay from './Exec2/CardsDisplay';
 // import Index from './L4_conditional_rendering/Index';
-import Parent from './RandomExercise/Parent';
+// import Parent from './RandomExercise/Parent';
 import Index from './ConditionalCSS/Index';
 // import App from './exploring_packages/App';
 // import App from './tictactoe/App'
@@ -15,10 +15,12 @@ import Index from './ConditionalCSS/Index';
 // import TroubledObject from './batching/TroubledObject';
 // import Form from './forms/Form';
 // import App from "./optimisedForms/App"
-import App from "./ErrorHandlingForms/App"
+// import App from "./ErrorHandlingForms/App"
+import Parent from './arrayState/Parent';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <Parent />
 );
 
