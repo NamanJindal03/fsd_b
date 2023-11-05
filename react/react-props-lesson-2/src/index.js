@@ -16,11 +16,13 @@ import Index from './ConditionalCSS/Index';
 // import Form from './forms/Form';
 // import App from "./optimisedForms/App"
 // import App from "./ErrorHandlingForms/App"
-import Parent from './arrayState/Parent';
+// import Parent from './arrayState/Parent';
+// import App from './upliftingState/App'
+import App from './upliftingStatePart2/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Parent />
+    <App />
 );
 

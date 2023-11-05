@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Child from './Child'
+import { v4 as uuidv4 } from 'uuid';
 
 let data = 'abcd'
+let abcd = [];
 export default function Parent() {
     const [arr, setArr] = useState([
         {data:'a',_id:'100'}, 
@@ -9,11 +11,12 @@ export default function Parent() {
         {data:'c',_id:'300'}, 
         {data:'d',_id:'400'}
     ])
+    const [newArr, setNewArr] = useState(abcd)
     function addData(){
         data+= '1';
         const obj = {
             data,
-            _id : Date.now()
+            _id : uuidv4()
         }
         console.log(obj)
         setArr((prev)=>{
