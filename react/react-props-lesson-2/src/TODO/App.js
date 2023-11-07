@@ -9,10 +9,27 @@ export default function App() {
             return [...prevTodoList, todo];
         })
     }
+    function handleTodoDelete(id){
+        console.log('attempted to delete ', id);
+        // const duplicate = [...todoList];
+
+        setTodoList((prev)=>{
+            // const newArr = prev.filter((_, i)=>{
+            //     return i !== index
+            // })
+            const newArr = prev.filter((todo)=>{
+                return todo.id !== id
+            })
+            return newArr
+        })
+    }
   return (
     <>
         <TodoForm addTodo={addTodo}/>
-        <TodoDisplay todoList={todoList}/>
+        <TodoDisplay 
+            todoList={todoList} 
+            handleTodoDelete={handleTodoDelete}
+        />
     </>
   )
 }

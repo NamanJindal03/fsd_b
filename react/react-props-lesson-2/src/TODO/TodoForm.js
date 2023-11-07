@@ -8,9 +8,14 @@ export default function TodoForm({addTodo}) {
     }  
     function handleTodoFormSubmit(e){
         e.preventDefault();
-        addTodo(todoValue)
+        const todoObject ={
+            data: todoValue,
+            id: Date.now()
+        }
+        addTodo(todoObject)
         setTodoValue("");
     }
+
 
   return (
     <form >
