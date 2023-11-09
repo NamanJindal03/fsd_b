@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { toast } from 'react-toastify';
 
 export default function TodoForm({addTodo}) {
     const [todoValue, setTodoValue] = useState(""); /* to handle input box -> making it a controlled component */
@@ -8,6 +9,10 @@ export default function TodoForm({addTodo}) {
     }  
     function handleTodoFormSubmit(e){
         e.preventDefault();
+        if(todoValue.trim() === ''){
+            toast.error('Todo cannot be blank', {});
+            return;
+        }
         const todoObject ={
             data: todoValue,
             id: Date.now(),

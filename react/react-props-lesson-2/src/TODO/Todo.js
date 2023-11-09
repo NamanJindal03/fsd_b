@@ -1,12 +1,14 @@
 import React from 'react'
-
+import { FaCheckDouble, FaTrashAlt } from "react-icons/fa";
 export default function Todo({todo, handleTodoDelete, handleTodoCompleteToggle}) {
   const {isCompleted, data, id} = todo;
   return (
-    <div style={{display:'flex', columnGap: '10px'}}>
+    <div style={{display:'flex', columnGap: '10px', width: '30%', justifyContent: 'space-between'}}>
         <div style={isCompleted ? {textDecoration: 'line-through'} : {}}>{data}</div>
-        <button onClick={()=>{handleTodoCompleteToggle(id)}}>Complete Icon</button>
-        <button onClick={()=> handleTodoDelete(id)}>Delete Icon</button>
+        <div className='actions'>
+          <FaCheckDouble onClick={()=>{handleTodoCompleteToggle(id)}}/>
+          <FaTrashAlt onClick={()=> handleTodoDelete(id)}/>
+        </div>
     </div>
   )
 }

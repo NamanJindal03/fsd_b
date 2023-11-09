@@ -4,7 +4,7 @@ import Todo from './Todo'
 export default function TodoDisplay({todoList, handleTodoDelete, handleTodoCompleteToggle}) {
   return (
     <>
-        {todoList.map((todo, index)=>{
+        {todoList.map((todo)=>{
             return (<Todo 
                 todo={todo} 
                 key={todo.id} 
