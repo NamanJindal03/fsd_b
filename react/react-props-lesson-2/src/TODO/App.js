@@ -3,7 +3,7 @@ import TodoForm from './TodoForm'
 import TodoDisplay from './TodoDisplay';
 
 export default function App() {
-    const [todoList, setTodoList] = useState([]);
+    const [todoList, setTodoList] = useState([]); //array of objects
     function addTodo(todo){
         setTodoList((prevTodoList)=>{
             return [...prevTodoList, todo];
@@ -23,12 +23,24 @@ export default function App() {
             return newArr
         })
     }
+    function handleTodoCompleteToggle(id){
+        setTodoList((prev)=>{
+            const updatedArr = prev.map((todo)=>{
+                if(todo.id === id){
+                    return {...todo, isCompleted: !todo.isCompleted}
+                }
+                return todo
+            })
+            return updatedArr;
+        })
+    }
   return (
     <>
         <TodoForm addTodo={addTodo}/>
         <TodoDisplay 
             todoList={todoList} 
             handleTodoDelete={handleTodoDelete}
+            handleTodoCompleteToggle= {handleTodoCompleteToggle}
         />
     </>
   )

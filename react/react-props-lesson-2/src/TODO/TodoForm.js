@@ -10,7 +10,8 @@ export default function TodoForm({addTodo}) {
         e.preventDefault();
         const todoObject ={
             data: todoValue,
-            id: Date.now()
+            id: Date.now(),
+            isCompleted: false,
         }
         addTodo(todoObject)
         setTodoValue("");
