@@ -22,7 +22,8 @@ import Index from './ConditionalCSS/Index';
 // import App from './TODO/App'
 // import App from './jsonHack/App'
 // import App from './lifecycle/App'
-import App from './lifecycle2/App';
+// import App from './lifecycle2/App';
+import App from './stopwatch/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
