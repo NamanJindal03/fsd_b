@@ -3,7 +3,7 @@ const Button = (props) => {
     const {content = 'Know More...', theme, title, disabled } = props
     return (
         <> 
-            <button className={`btn ${theme}`} {...props}>{content}</button>
+            <button className={`btn ${theme}`} {...props}>{content} </button>
         </>
     )
 }

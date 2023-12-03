@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import CardList from "./components/CardList";
+import Modal from "./components/Modal";
 
 const INITIAL_API = 'https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1';
 const MOCK_DATA =  [
@@ -125,6 +126,8 @@ const MOCK_DATA =  [
 const App = () => {
     const [apiEndPoint, setApiEndPoint] = useState(INITIAL_API);
     const [pokemonData, setPokemonData] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [modalData, setModalData] = useState({});
     
     async function getPokemonData(endpoint){
         const response = await fetch(endpoint);
@@ -151,12 +154,21 @@ const App = () => {
         getPokemonData(apiEndPoint);
     }
 
+    function closeModal(){
+        setShowModal(false)
+    }
+    function handleModalAppearance(data){
+        setModalData(data);
+        setShowModal(true);
+    }
+
+
     useEffect(()=>{
         getPokemonData(apiEndPoint);
         // setPokemonData(MOCK_DATA);
     },[])
     return (
-        <>
+        <div>
             {/* <section>
                 {pokemonData.map((pokemon)=>{
                     return (<div>
@@ -168,10 +180,13 @@ const App = () => {
             <Button content={"Know More..."} theme={"grass"} title={'sample2'} disabled={false}/>
             <Button  theme={"grass"} title={'sample2'} disabled={false}/>
             <Card theme={"normal"}/> */}
-            <CardList pokemonData={pokemonData}/>
+            <CardList pokemonData={pokemonData} handleModalAppearance={handleModalAppearance}/>
+
+            <button onClick={()=> setShowModal(true)}>Invoke Modal</button>
+            <Modal show={showModal} closeModal={closeModal} data={modalData}/>
 
             {apiEndPoint && <button onClick={handleFetchMorePokemons}>Get More Pokemons</button>}
-        </>
+        </div>
     )
 }
 
