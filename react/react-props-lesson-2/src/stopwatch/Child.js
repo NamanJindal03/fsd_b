@@ -22,9 +22,16 @@ export default function Child() {
         }, 1000)
 
         return () =>{
+            console.log('stopped')
             clearInterval(timer);
         }
     }, [])
+
+    useEffect(()=>{
+        return () =>{
+            console.log('yet another function added to secret location for unmount')
+        }
+    },[])
 
     function handleClick(){
         console.log('clicked');

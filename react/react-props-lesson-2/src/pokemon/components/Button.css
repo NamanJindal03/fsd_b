@@ -1,0 +1,16 @@
+
+.btn{
+    border: none;
+    padding: 0.6rem 1.1rem;
+    font-size: 1.05rem;
+    border-radius: 4px;
+
+}
+/* Button Type Styles */
+.normal{
+    background: radial-gradient(329px at 3.1% 9.3%, rgb(251, 204, 235) 28.1%, rgba(221, 221, 221, 0.15) 100.7%);
+}
+
+.grass{
+    background:linear-gradient(45deg, #057a26, #d5ff00);
+}
