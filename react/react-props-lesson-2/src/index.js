@@ -28,7 +28,10 @@ import Index from './ConditionalCSS/Index';
 // import App from './stopwatch/App'
 // import App from './api/App'
 // import App from './post/App'
-import App from './pokemon/App'
+// import App from './pokemon/App'
+// import { BrowserRouter } from 'react-router-dom';
+// import App from './reactRouter/App'
+import App from './reactrouterexercise/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

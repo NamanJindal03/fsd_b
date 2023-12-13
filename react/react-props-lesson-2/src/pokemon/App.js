@@ -3,6 +3,7 @@ import Button from "./components/Button";
 import Card from "./components/Card";
 import CardList from "./components/CardList";
 import Modal from "./components/Modal";
+import './App.css'
 
 const INITIAL_API = 'https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1';
 const MOCK_DATA =  [
@@ -168,7 +169,11 @@ const App = () => {
         // setPokemonData(MOCK_DATA);
     },[])
     return (
-        <div>
+        <div className="sample">
+            <div className="handleHeading">
+                <h1 className="head1">THIS IS MY HEADING</h1>
+                <h1 className="head1">THIS IS MY HEADING</h1>
+            </div>
             {/* <section>
                 {pokemonData.map((pokemon)=>{
                     return (<div>
@@ -180,12 +185,17 @@ const App = () => {
             <Button content={"Know More..."} theme={"grass"} title={'sample2'} disabled={false}/>
             <Button  theme={"grass"} title={'sample2'} disabled={false}/>
             <Card theme={"normal"}/> */}
+            {/*  */}
             <CardList pokemonData={pokemonData} handleModalAppearance={handleModalAppearance}/>
 
-            <button onClick={()=> setShowModal(true)}>Invoke Modal</button>
+            {/* <button onClick={()=> setShowModal(true)}>Invoke Modal</button> */}
             <Modal show={showModal} closeModal={closeModal} data={modalData}/>
 
-            {apiEndPoint && <button onClick={handleFetchMorePokemons}>Get More Pokemons</button>}
+            {/* {apiEndPoint && 
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <button onClick={handleFetchMorePokemons}>Get More Pokemons</button>
+                </div>
+            } */}
         </div>
     )
 }

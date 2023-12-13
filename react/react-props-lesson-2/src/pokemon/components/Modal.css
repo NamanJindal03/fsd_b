@@ -1,3 +1,14 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+.alignPokemonContainer{
+    flex-direction: column;
+    justify-content: center;
+}
+.constraintWidth{
+    width: 10rem;
+}
 .modal{
     display: flex;
     align-items: center;
@@ -27,8 +38,39 @@
 .content{
     background-color: white;
     z-index: 2;
-    padding: 2rem;
+    padding: 3rem 5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 8px;
+    color: black;
+    column-gap:1.5rem;
+    position: relative;
+}
+
+.pokemonStats{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.statContent{
+    font-size: 1.5rem;
+}
+.statHeads{
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.pokemonStats div div{
+    margin-bottom:1.25rem ;
+}
+.modalPokemonImage{
+    width: 250px;
+}
+.crossBtn{
+    position: absolute;
+    top: 35px;
+    right:50px;
+    cursor: pointer;
 }

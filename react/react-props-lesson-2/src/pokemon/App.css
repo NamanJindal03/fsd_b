@@ -1,0 +1,12 @@
+.handleHeading{
+    position: relative;
+}
+
+.head1{
+    position: absolute;
+    top:0;
+}
+
+.sample{
+    position: relative;
+}
