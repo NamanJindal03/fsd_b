@@ -31,11 +31,12 @@ import Index from './ConditionalCSS/Index';
 // import App from './pokemon/App'
 // import { BrowserRouter } from 'react-router-dom';
 // import App from './reactRouter/App'
-import App from './reactrouterexercise/App'
+// import App from './reactrouterexercise/App'
+import App2 from './reducer/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <App2 />
 );
 
