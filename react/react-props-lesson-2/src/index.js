@@ -32,11 +32,14 @@ import Index from './ConditionalCSS/Index';
 // import { BrowserRouter } from 'react-router-dom';
 // import App from './reactRouter/App'
 // import App from './reactrouterexercise/App'
-import App2 from './reducer/App'
+// import App2 from './reducer/App'
+// import App from './reducerForm/App'
+// import App from './wrapper/App'
+import App from './context/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App2 />
+    <App />
 );
 
