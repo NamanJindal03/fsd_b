@@ -1,6 +1,8 @@
-import React from 'react'
-import MyContext from './context/context'
+import React, {useContext} from 'react'
+import MyContext from './context/context';
+
 export default function GrandChild() {
+    // const myContextState = useContext(MyContext);
   return (
     <MyContext.Consumer>
         {/* <>

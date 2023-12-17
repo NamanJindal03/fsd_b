@@ -35,7 +35,9 @@ import Index from './ConditionalCSS/Index';
 // import App2 from './reducer/App'
 // import App from './reducerForm/App'
 // import App from './wrapper/App'
-import App from './context/App'
+// import App from './context/App'
+import App from './ThemeToggler/App'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
