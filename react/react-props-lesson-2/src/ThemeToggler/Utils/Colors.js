@@ -8,6 +8,11 @@ const AppTheme = {
         textColor: "#FFF",
         backgroundColor: "#000",
         border: "1px solid pink"
+    },
+    mid: {
+        textColor: 'orange',
+        backgroundColor: 'blue',
+        border: '1px solid red'
     }
 }
 export default AppTheme;
