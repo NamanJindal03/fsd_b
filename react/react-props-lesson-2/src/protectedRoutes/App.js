@@ -1,26 +1,42 @@
-import React, { Children } from 'react'
-import { BrowserRouter, Routes, Route, Outlet, Link } from 'react-router-dom'
+import React, { Children, useContext, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Outlet, Link, Navigate, useNavigate } from 'react-router-dom'
 import {userRoleMapping, ROLES} from './Utils/constants'
+import {AuthProvider, AuthContext} from './context/AuthContext'
+
 
 const LOGGED_IN_USER = userRoleMapping.dinesh //in reality having the compelte info of the user, currently having just the role directlt
 
 export default function App() {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<PageLayout />}>
-                <Route path='finance' element={<FinanceAuth> <Finance /> </FinanceAuth>} />
-                <Route path='logistics' element={<LogisticsAuth> <Logistics /> </LogisticsAuth>} />
-                <Route path='product' element={<ProductAuth><Product /></ProductAuth>} />
-                <Route path='admin' element={<AdminAuth> <Admin /> </AdminAuth>} />
-                <Route path='shipments' element={<LogisticsAuth><Shipments /></LogisticsAuth>} />
-                <Route path='*' element={<NotFound />} />
-            </Route>
-        </Routes>
+        <AuthProvider>
+            <Routes>
+                <Route path='/' element={<PageLayout />}>
+                    <Route path='finance' element={<FinanceAuth> <Finance /> </FinanceAuth>}/>
+                    <Route path='logistics' element={<LogisticsAuth> <Logistics /> </LogisticsAuth>} />
+                    <Route path='product' element={<ProductAuth><Product /></ProductAuth>} />
+                    <Route path='admin' element={<AdminAuth> <Admin /> </AdminAuth>} />
+                    <Route path='shipments' element={<LogisticsAuth><Shipments /></LogisticsAuth>} />
+                    <Route path='*' element={<NotFound />} />
+                </Route>
+                <Route path="/signin" element={<div> On signin </div>} />
+            </Routes>
+        </AuthProvider>
     </BrowserRouter>
   )
 }
 function PageLayout(){
+    const {isLoggedIn} = useContext(AuthContext);
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(!isLoggedIn){
+            setTimeout(()=>{
+                navigate('/signin')
+            }, 3000)
+        }
+    })
+    // if(!isLoggedIn) return (<Navigate to={'/signin'}> </Navigate>)
+    if(!isLoggedIn) return (<div>Not Logged in</div>)
     return (
         <>
             <nav>
