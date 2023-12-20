@@ -1,0 +1,21 @@
+
+    <div>
+        <label htmlFor="">Enter Your Name</label>
+        <input type="text"  id="name" value="thierhtiewhteihw"/>
+    </div>
+    <br />
+    <div>
+        <label htmlFor="">Enter Your Age</label>
+        <input type="text" />
+    </div>
+    <button type='submit' id="submit">Submit</button>
+<script>
+    const nameTag =document.querySelector('#name');
+    const submitBtn = document.querySelector('#submit');
+    submitBtn.addEventListener('click', ()=>{
+        console.log(nameTag.value)
+        //i want to get the value present in the name input box
+        console.log('get the value')
+    })
+
+</script>
