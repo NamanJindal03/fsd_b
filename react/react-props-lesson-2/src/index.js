@@ -38,7 +38,9 @@ import Index from './ConditionalCSS/Index';
 // import App from './context/App'
 // import App from './ThemeToggler2/App'
 // import App from './protectedRoutes/App'
-import App from './ref/App'
+// import App from './ref/App'
+// import App from './createRefVsUseRef/App'
+import App from './optimizations/App'
 
 
 
