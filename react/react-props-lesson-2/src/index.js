@@ -40,12 +40,12 @@ import Index from './ConditionalCSS/Index';
 // import App from './protectedRoutes/App'
 // import App from './ref/App'
 // import App from './createRefVsUseRef/App'
-import App from './optimizations/App'
+import App2 from './optimizations/App2'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <App2 />
 );
 
