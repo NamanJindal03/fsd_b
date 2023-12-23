@@ -40,12 +40,15 @@ import Index from './ConditionalCSS/Index';
 // import App from './protectedRoutes/App'
 // import App from './ref/App'
 // import App from './createRefVsUseRef/App'
-import App4 from './optimizations/App4'
+// import App4 from './optimizations/App4'
+// import App from './lazyloading/App'
+// import App from './customHooks/useBoolean/App'
+import App from './customHooks/useLocalStorage/App'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App4 />
+    <App />
 );
 
