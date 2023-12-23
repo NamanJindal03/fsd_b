@@ -43,7 +43,7 @@ import Index from './ConditionalCSS/Index';
 // import App4 from './optimizations/App4'
 // import App from './lazyloading/App'
 // import App from './customHooks/useBoolean/App'
-import App from './customHooks/useLocalStorage/App'
+import App from './customHooks/useDebounce/App'
 
 
 
